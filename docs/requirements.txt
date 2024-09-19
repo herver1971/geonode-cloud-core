@@ -21,3 +21,4 @@ django-avatar
 GeoNode>=4.0
 django-guardian
 django-tastypie
+pymupdf
