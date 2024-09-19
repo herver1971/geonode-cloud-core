@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>geonode.upload package &mdash; GeoNode Cloud Core 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=8d563738"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="geonode.upload.api package" href="geonode.upload.api.html" />
+    <link rel="prev" title="geonode.thumbs.tests package" href="geonode.thumbs.tests.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            GeoNode Cloud Core
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">geonode-cloud-core</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="create-envfile.html">create-envfile module</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="geonode.html">geonode package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="geonode.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="geonode.api.html">geonode.api package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.html">geonode.base package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.br.html">geonode.br package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.catalogue.html">geonode.catalogue package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.client.html">geonode.client package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.documents.html">geonode.documents package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.facets.html">geonode.facets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.favorite.html">geonode.favorite package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.geoapps.html">geonode.geoapps package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.geoserver.html">geonode.geoserver package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.groups.html">geonode.groups package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.harvesting.html">geonode.harvesting package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.invitations.html">geonode.invitations package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.layers.html">geonode.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.management_commands_http.html">geonode.management_commands_http package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.maps.html">geonode.maps package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.messaging.html">geonode.messaging package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.monitoring.html">geonode.monitoring package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.people.html">geonode.people package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.proxy.html">geonode.proxy package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.resource.html">geonode.resource package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.security.html">geonode.security package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.services.html">geonode.services package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.social.html">geonode.social package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.storage.html">geonode.storage package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.tasks.html">geonode.tasks package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.tests.html">geonode.tests package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.themes.html">geonode.themes package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.thumbs.html">geonode.thumbs package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">geonode.upload package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.apps">geonode.apps module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.celery_app">geonode.celery_app module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.compat">geonode.compat module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-context-processors-module">geonode.context_processors module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.custom_translations">geonode.custom_translations module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-decorators-module">geonode.decorators module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-loaders-module">geonode.loaders module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-notifications-backend-module">geonode.notifications_backend module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.notifications_helper">geonode.notifications_helper module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.serializer">geonode.serializer module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-settings-module">geonode.settings module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.singleton">geonode.singleton module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-sitemap-module">geonode.sitemap module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-urls-module">geonode.urls module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-utils-module">geonode.utils module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.version">geonode.version module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-views-module">geonode.views module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.wsgi">geonode.wsgi module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="manage.html">manage module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pavement.html">pavement module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup.html">setup module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tasks.html">tasks module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">GeoNode Cloud Core</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">geonode-cloud-core</a></li>
+          <li class="breadcrumb-item"><a href="geonode.html">geonode package</a></li>
+      <li class="breadcrumb-item active">geonode.upload package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/geonode.upload.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="geonode-upload-package">
+<h1>geonode.upload package<a class="headerlink" href="#geonode-upload-package" title="Link to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="geonode.upload.api.html">geonode.upload.api package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.api.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.api.html#module-geonode.upload.api.exceptions">geonode.upload.api.exceptions module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.upload.api.html#geonode.upload.api.exceptions.FileUploadLimitException"><code class="docutils literal notranslate"><span class="pre">FileUploadLimitException</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.api.html#geonode.upload.api.exceptions.FileUploadLimitException.category"><code class="docutils literal notranslate"><span class="pre">FileUploadLimitException.category</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.api.html#geonode.upload.api.exceptions.FileUploadLimitException.default_code"><code class="docutils literal notranslate"><span class="pre">FileUploadLimitException.default_code</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.api.html#geonode.upload.api.exceptions.FileUploadLimitException.default_detail"><code class="docutils literal notranslate"><span class="pre">FileUploadLimitException.default_detail</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.api.html#geonode.upload.api.exceptions.FileUploadLimitException.status_code"><code class="docutils literal notranslate"><span class="pre">FileUploadLimitException.status_code</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.upload.api.html#geonode.upload.api.exceptions.GeneralUploadException"><code class="docutils literal notranslate"><span class="pre">GeneralUploadException</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.api.html#geonode.upload.api.exceptions.GeneralUploadException.category"><code class="docutils literal notranslate"><span class="pre">GeneralUploadException.category</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.api.html#geonode.upload.api.exceptions.GeneralUploadException.default_code"><code class="docutils literal notranslate"><span class="pre">GeneralUploadException.default_code</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.api.html#geonode.upload.api.exceptions.GeneralUploadException.default_detail"><code class="docutils literal notranslate"><span class="pre">GeneralUploadException.default_detail</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.api.html#geonode.upload.api.exceptions.GeneralUploadException.status_code"><code class="docutils literal notranslate"><span class="pre">GeneralUploadException.status_code</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.upload.api.html#geonode.upload.api.exceptions.UploadParallelismLimitException"><code class="docutils literal notranslate"><span class="pre">UploadParallelismLimitException</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.api.html#geonode.upload.api.exceptions.UploadParallelismLimitException.category"><code class="docutils literal notranslate"><span class="pre">UploadParallelismLimitException.category</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.api.html#geonode.upload.api.exceptions.UploadParallelismLimitException.default_code"><code class="docutils literal notranslate"><span class="pre">UploadParallelismLimitException.default_code</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.api.html#geonode.upload.api.exceptions.UploadParallelismLimitException.default_detail"><code class="docutils literal notranslate"><span class="pre">UploadParallelismLimitException.default_detail</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.api.html#geonode.upload.api.exceptions.UploadParallelismLimitException.status_code"><code class="docutils literal notranslate"><span class="pre">UploadParallelismLimitException.status_code</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.api.html#geonode-upload-api-permissions-module">geonode.upload.api.permissions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.api.html#geonode-upload-api-serializers-module">geonode.upload.api.serializers module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.api.html#geonode-upload-api-tests-module">geonode.upload.api.tests module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.api.html#geonode-upload-api-urls-module">geonode.upload.api.urls module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.api.html#geonode-upload-api-views-module">geonode.upload.api.views module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.api.html#module-geonode.upload.api">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geonode.upload.migrations.html">geonode.upload.migrations package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.migrations.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.migrations.html#module-geonode.upload.migrations.0025_auto_20200115_1836">geonode.upload.migrations.0025_auto_20200115_1836 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0025_auto_20200115_1836.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0025_auto_20200115_1836.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0025_auto_20200115_1836.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.migrations.html#module-geonode.upload.migrations.0026_auto_20200321_1349">geonode.upload.migrations.0026_auto_20200321_1349 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0026_auto_20200321_1349.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0026_auto_20200321_1349.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0026_auto_20200321_1349.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.migrations.html#module-geonode.upload.migrations.0027_auto_20210329_1348">geonode.upload.migrations.0027_auto_20210329_1348 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0027_auto_20210329_1348.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0027_auto_20210329_1348.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0027_auto_20210329_1348.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.migrations.html#module-geonode.upload.migrations.0028_upload_append_to_mosaic_opts">geonode.upload.migrations.0028_upload_append_to_mosaic_opts module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0028_upload_append_to_mosaic_opts.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0028_upload_append_to_mosaic_opts.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0028_upload_append_to_mosaic_opts.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.migrations.html#module-geonode.upload.migrations.0029_auto_20210329_1458">geonode.upload.migrations.0029_auto_20210329_1458 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0029_auto_20210329_1458.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0029_auto_20210329_1458.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0029_auto_20210329_1458.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.migrations.html#module-geonode.upload.migrations.0030_upload_create_date">geonode.upload.migrations.0030_upload_create_date module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0030_upload_create_date.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0030_upload_create_date.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0030_upload_create_date.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.migrations.html#module-geonode.upload.migrations.0031_upload_resume_url">geonode.upload.migrations.0031_upload_resume_url module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0031_upload_resume_url.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0031_upload_resume_url.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0031_upload_resume_url.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.migrations.html#geonode-upload-migrations-0032-uploadsizelimit-module">geonode.upload.migrations.0032_uploadsizelimit module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.migrations.html#geonode-upload-migrations-0033-auto-20210527-1520-module">geonode.upload.migrations.0033_auto_20210527_1520 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.migrations.html#module-geonode.upload.migrations.0033_auto_20210528_1556">geonode.upload.migrations.0033_auto_20210528_1556 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0033_auto_20210528_1556.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0033_auto_20210528_1556.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0033_auto_20210528_1556.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0033_auto_20210528_1556.update_resource_id"><code class="docutils literal notranslate"><span class="pre">update_resource_id()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.migrations.html#module-geonode.upload.migrations.0033_auto_20210531_1252">geonode.upload.migrations.0033_auto_20210531_1252 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0033_auto_20210531_1252.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0033_auto_20210531_1252.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0033_auto_20210531_1252.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.migrations.html#module-geonode.upload.migrations.0033_upload_store_spatial_files">geonode.upload.migrations.0033_upload_store_spatial_files module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0033_upload_store_spatial_files.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0033_upload_store_spatial_files.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0033_upload_store_spatial_files.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.migrations.html#module-geonode.upload.migrations.0035_update_uploadsizelimit_objects">geonode.upload.migrations.0035_update_uploadsizelimit_objects module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0035_update_uploadsizelimit_objects.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0035_update_uploadsizelimit_objects.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0035_update_uploadsizelimit_objects.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0035_update_uploadsizelimit_objects.update_upload_size_limit_objects"><code class="docutils literal notranslate"><span class="pre">update_upload_size_limit_objects()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.migrations.html#geonode-upload-migrations-0037-uploadparallelismlimit-module">geonode.upload.migrations.0037_uploadparallelismlimit module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.migrations.html#module-geonode.upload.migrations.0038_alter_upload_name">geonode.upload.migrations.0038_alter_upload_name module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0038_alter_upload_name.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0038_alter_upload_name.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0038_alter_upload_name.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.migrations.html#module-geonode.upload.migrations.0039_auto_20220506_0833">geonode.upload.migrations.0039_auto_20220506_0833 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0039_auto_20220506_0833.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0039_auto_20220506_0833.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.0039_auto_20220506_0833.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.migrations.html#module-geonode.upload.migrations.24_initial">geonode.upload.migrations.24_initial module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.24_initial.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.24_initial.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.migrations.html#geonode.upload.migrations.24_initial.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.migrations.html#module-geonode.upload.migrations">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geonode.upload.templatetags.html">geonode.upload.templatetags package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.templatetags.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.templatetags.html#module-geonode.upload.templatetags.upload_tags">geonode.upload.templatetags.upload_tags module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.upload.templatetags.html#geonode.upload.templatetags.upload_tags.upload_js"><code class="docutils literal notranslate"><span class="pre">upload_js()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.templatetags.html#module-geonode.upload.templatetags">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geonode.upload.tests.html">geonode.upload.tests package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.tests.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.tests.html#geonode-upload-tests-integration-module">geonode.upload.tests.integration module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.tests.html#geonode-upload-tests-test-files-module">geonode.upload.tests.test_files module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.tests.html#geonode-upload-tests-test-settings-module">geonode.upload.tests.test_settings module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.tests.html#geonode-upload-tests-test-utils-module">geonode.upload.tests.test_utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.tests.html#geonode-upload-tests-utils-module">geonode.upload.tests.utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.upload.tests.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="geonode-upload-admin-module">
+<h2>geonode.upload.admin module<a class="headerlink" href="#geonode-upload-admin-module" title="Link to this heading"></a></h2>
+</section>
+<section id="geonode-upload-files-module">
+<h2>geonode.upload.files module<a class="headerlink" href="#geonode-upload-files-module" title="Link to this heading"></a></h2>
+</section>
+<section id="geonode-upload-forms-module">
+<h2>geonode.upload.forms module<a class="headerlink" href="#geonode-upload-forms-module" title="Link to this heading"></a></h2>
+</section>
+<section id="geonode-upload-models-module">
+<h2>geonode.upload.models module<a class="headerlink" href="#geonode-upload-models-module" title="Link to this heading"></a></h2>
+</section>
+<section id="module-geonode.upload.tasks">
+<span id="geonode-upload-tasks-module"></span><h2>geonode.upload.tasks module<a class="headerlink" href="#module-geonode.upload.tasks" title="Link to this heading"></a></h2>
+</section>
+<section id="module-geonode.upload.upload">
+<span id="geonode-upload-upload-module"></span><h2>geonode.upload.upload module<a class="headerlink" href="#module-geonode.upload.upload" title="Link to this heading"></a></h2>
+<p>Provide views and business logic of doing an upload.</p>
+<p>The upload process may be multi step so views are all handled internally here
+by the view function.</p>
+<p>The pattern to support separation of view/logic is each step in the upload
+process is suffixed with “_step”. The view for that step is suffixed with
+“_step_view”. The goal of separation of view/logic is to support various
+programmatic uses of this API. The logic steps should not accept request objects
+or return response objects.</p>
+<p>State is stored in a UploaderSession object stored in the user’s session.
+This needs to be made more stateful by adding a model.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="geonode.upload.upload.UploaderSession">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geonode.upload.upload.</span></span><span class="sig-name descname"><span class="pre">UploaderSession</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/upload/upload.html#UploaderSession"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.upload.upload.UploaderSession" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>All objects held must be able to survive a good pickling</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.upload.upload.UploaderSession.append_to_mosaic_name">
+<span class="sig-name descname"><span class="pre">append_to_mosaic_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.append_to_mosaic_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.upload.upload.UploaderSession.append_to_mosaic_opts">
+<span class="sig-name descname"><span class="pre">append_to_mosaic_opts</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.append_to_mosaic_opts" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.upload.upload.UploaderSession.base_file">
+<span class="sig-name descname"><span class="pre">base_file</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.base_file" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.upload.upload.UploaderSession.charset">
+<span class="sig-name descname"><span class="pre">charset</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'UTF-8'</span></em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.charset" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.upload.upload.UploaderSession.cleanup">
+<span class="sig-name descname"><span class="pre">cleanup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/upload/upload.html#UploaderSession.cleanup"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.upload.upload.UploaderSession.cleanup" title="Link to this definition"></a></dt>
+<dd><p>do what we should at the given state of the upload</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.upload.upload.UploaderSession.completed_step">
+<span class="sig-name descname"><span class="pre">completed_step</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.completed_step" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.upload.upload.UploaderSession.dataset_abstract">
+<span class="sig-name descname"><span class="pre">dataset_abstract</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.dataset_abstract" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.upload.upload.UploaderSession.dataset_title">
+<span class="sig-name descname"><span class="pre">dataset_title</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.dataset_title" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.upload.upload.UploaderSession.error_msg">
+<span class="sig-name descname"><span class="pre">error_msg</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.error_msg" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.upload.upload.UploaderSession.import_session">
+<span class="sig-name descname"><span class="pre">import_session</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.import_session" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.upload.upload.UploaderSession.import_sld_file">
+<span class="sig-name descname"><span class="pre">import_sld_file</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.import_sld_file" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.upload.upload.UploaderSession.mosaic">
+<span class="sig-name descname"><span class="pre">mosaic</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.mosaic" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.upload.upload.UploaderSession.mosaic_time_regex">
+<span class="sig-name descname"><span class="pre">mosaic_time_regex</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.mosaic_time_regex" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.upload.upload.UploaderSession.mosaic_time_value">
+<span class="sig-name descname"><span class="pre">mosaic_time_value</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.mosaic_time_value" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.upload.upload.UploaderSession.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.upload.upload.UploaderSession.permissions">
+<span class="sig-name descname"><span class="pre">permissions</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.permissions" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.upload.upload.UploaderSession.spatial_files_uploaded">
+<span class="sig-name descname"><span class="pre">spatial_files_uploaded</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.spatial_files_uploaded" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.upload.upload.UploaderSession.tempdir">
+<span class="sig-name descname"><span class="pre">tempdir</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.tempdir" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.upload.upload.UploaderSession.time">
+<span class="sig-name descname"><span class="pre">time</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.time" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.upload.upload.UploaderSession.time_info">
+<span class="sig-name descname"><span class="pre">time_info</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.time_info" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.upload.upload.UploaderSession.time_transforms">
+<span class="sig-name descname"><span class="pre">time_transforms</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.time_transforms" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.upload.upload.UploaderSession.update_mode">
+<span class="sig-name descname"><span class="pre">update_mode</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.update_mode" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.upload.upload.UploaderSession.upload_type">
+<span class="sig-name descname"><span class="pre">upload_type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.upload_type" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.upload.upload.UploaderSession.user">
+<span class="sig-name descname"><span class="pre">user</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#geonode.upload.upload.UploaderSession.user" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="geonode-upload-upload-validators-module">
+<h2>geonode.upload.upload_validators module<a class="headerlink" href="#geonode-upload-upload-validators-module" title="Link to this heading"></a></h2>
+</section>
+<section id="geonode-upload-uploadhandler-module">
+<h2>geonode.upload.uploadhandler module<a class="headerlink" href="#geonode-upload-uploadhandler-module" title="Link to this heading"></a></h2>
+</section>
+<section id="geonode-upload-urls-module">
+<h2>geonode.upload.urls module<a class="headerlink" href="#geonode-upload-urls-module" title="Link to this heading"></a></h2>
+</section>
+<section id="geonode-upload-utils-module">
+<h2>geonode.upload.utils module<a class="headerlink" href="#geonode-upload-utils-module" title="Link to this heading"></a></h2>
+</section>
+<section id="geonode-upload-views-module">
+<h2>geonode.upload.views module<a class="headerlink" href="#geonode-upload-views-module" title="Link to this heading"></a></h2>
+</section>
+<section id="module-geonode.upload">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-geonode.upload" title="Link to this heading"></a></h2>
+<dl class="py exception">
+<dt class="sig sig-object py" id="geonode.upload.LayerNotReady">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geonode.upload.</span></span><span class="sig-name descname"><span class="pre">LayerNotReady</span></span><a class="reference internal" href="_modules/geonode/upload.html#LayerNotReady"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.upload.LayerNotReady" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="geonode.upload.UploadAppConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geonode.upload.</span></span><span class="sig-name descname"><span class="pre">UploadAppConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_module</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/upload.html#UploadAppConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.upload.UploadAppConfig" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">AppConfig</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.upload.UploadAppConfig.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'geonode.upload'</span></em><a class="headerlink" href="#geonode.upload.UploadAppConfig.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.upload.UploadAppConfig.ready">
+<span class="sig-name descname"><span class="pre">ready</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/upload.html#UploadAppConfig.ready"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.upload.UploadAppConfig.ready" title="Link to this definition"></a></dt>
+<dd><p>Override this method in subclasses to run code when Django starts.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geonode.upload.run_setup_hooks">
+<span class="sig-prename descclassname"><span class="pre">geonode.upload.</span></span><span class="sig-name descname"><span class="pre">run_setup_hooks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sender</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/upload.html#run_setup_hooks"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.upload.run_setup_hooks" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="geonode.thumbs.tests.html" class="btn btn-neutral float-left" title="geonode.thumbs.tests package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="geonode.upload.api.html" class="btn btn-neutral float-right" title="geonode.upload.api package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Kan Territory &amp; IT.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
