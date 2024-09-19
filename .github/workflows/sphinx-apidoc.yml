@@ -20,8 +20,8 @@ jobs:
     # 2. Set up Python
     - name: Set up Python
       uses: actions/setup-python@v4
-     # with:
-     #   python-version: '3.x'
+      with:
+        python-version: '3.8'
 
     # 3. Install dependencies
     - name: Install dependencies
@@ -44,7 +44,7 @@ jobs:
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-         git add docs/_build/html docs/*.rst
+        git add docs/_build/html docs/*.rst
         git commit -m "Auto-update documentation"
         git push origin HEAD:main  # Forzar el push a la rama main
       env:
