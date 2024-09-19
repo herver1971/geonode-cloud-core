@@ -1,0 +1,15 @@
+django_uuid_upload_path-1.0.0.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+django_uuid_upload_path-1.0.0.dist-info/METADATA,sha256=5znngERsaWvxPkOTB6jO4WMJoK54eGiFW1S1fQYWqHE,829
+django_uuid_upload_path-1.0.0.dist-info/RECORD,,
+django_uuid_upload_path-1.0.0.dist-info/REQUESTED,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_uuid_upload_path-1.0.0.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+django_uuid_upload_path-1.0.0.dist-info/top_level.txt,sha256=-ZdI208hA3efAi7244fkIIaw-UYsAN6lY5o3fui91QE,17
+django_uuid_upload_path-1.0.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+uuid_upload_path/__init__.py,sha256=KLgsY2NiQjHtP3l8x9i7dU6ha1f08KvsKQUsCkP8CIA,272
+uuid_upload_path/__pycache__/__init__.cpython-310.pyc,,
+uuid_upload_path/__pycache__/storage.cpython-310.pyc,,
+uuid_upload_path/__pycache__/tests.cpython-310.pyc,,
+uuid_upload_path/__pycache__/uuid.cpython-310.pyc,,
+uuid_upload_path/storage.py,sha256=DGNTXCT8AeKxeSr9bp64xPx-wwIEtcEIhTb_ffU_g9Y,766
+uuid_upload_path/tests.py,sha256=-3pn0okNz1LqqQ5nDuTrQGL2HruyqKvyhisUJmqRHR8,1508
+uuid_upload_path/uuid.py,sha256=dRNn5denp4AXSlFTpfFqj4KGtHcLC14Ik3HUK0BM880,204
