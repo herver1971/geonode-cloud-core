@@ -4,7 +4,7 @@ sphinx-rtd-theme
 sphinxcontrib-openapi
 sphinxcontrib-napoleon
 sphinx-autobuild
-GDAL>=3.0.0
+GDAL==3.4.1
 
 # native dependencies
 Pillow==10.0.1
