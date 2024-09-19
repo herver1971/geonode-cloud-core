@@ -11,7 +11,7 @@ import sys
 sys.path.insert(0, os.path.abspath('..'))
 
 
-project = 'KoboToolBox Provider for Apache Airflow'
+project = 'GeoNode Cloud Core'
 copyright = '2024, Kan Territory & IT'
 author = 'Kan Territory & IT'
 release = '1.0.0'
