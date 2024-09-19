@@ -16,4 +16,8 @@ sqlalchemy
 psycopg2
 shapely
 requests
-
+Django>=3.2
+django-avatar
+GeoNode>=4.0
+django-guardian
+django-tastypie
