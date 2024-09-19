@@ -4,24 +4,6 @@ sphinx-rtd-theme
 sphinxcontrib-openapi
 sphinxcontrib-napoleon
 sphinx-autobuild
-apache-airflow
-apache-airflow-providers-ssh
-apache-airflow-providers-common-sql
-apache-airflow-providers-postgres
-Unidecode
-wheel
-pandas
-geopandas
-sqlalchemy
-psycopg2
-shapely
-requests
-Django>=3.2
-django-avatar
-GeoNode>=4.0
-django-guardian
-django-tastypie
-pymupdf
 
 # native dependencies
 Pillow==10.0.1
