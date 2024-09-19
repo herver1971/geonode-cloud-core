@@ -17,6 +17,9 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'geonode'  # Cambia 'nombre_de_tu_proyect
 # Inicializa Django
 django.setup()
 
+from django.apps import apps
+apps.populate(settings.INSTALLED_APPS)
+
 project = 'GeoNode Cloud Core'
 copyright = '2024, Kan Territory & IT'
 author = 'Kan Territory & IT'
