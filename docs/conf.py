@@ -8,6 +8,8 @@
 import os
 import sys
 import django
+from django.conf import settings
+from django.apps import apps
 
 sys.path.insert(0, os.path.abspath('..'))
 
@@ -16,9 +18,6 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'geonode'  # Cambia 'nombre_de_tu_proyect
 
 # Inicializa Django
 django.setup()
-
-from django.apps import apps
-apps.populate(settings.INSTALLED_APPS)
 
 project = 'GeoNode Cloud Core'
 copyright = '2024, Kan Territory & IT'
