@@ -7,9 +7,15 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 import os
 import sys
+import django
 
 sys.path.insert(0, os.path.abspath('..'))
 
+# Establece las variables de entorno de Django
+os.environ['DJANGO_SETTINGS_MODULE'] = 'geonode'  # Cambia 'nombre_de_tu_proyecto' por el nombre correcto
+
+# Inicializa Django
+django.setup()
 
 project = 'GeoNode Cloud Core'
 copyright = '2024, Kan Territory & IT'
