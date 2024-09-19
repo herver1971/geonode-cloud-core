@@ -15,5 +15,5 @@ exclude = '''
 '''
 
 [build-system]
-requires = ["setuptools >= 40.8", "pip >= 19.1", "wheel"]
+requires = ["setuptools >= 51.0.0", "pip >= 19.1", "wheel>=0.36.0"]
 build-backend = "setuptools.build_meta"
