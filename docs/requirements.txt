@@ -1,9 +1,11 @@
 sphinx
 sphinx-intl
+sphinx-django
 sphinx-rtd-theme
 sphinxcontrib-openapi
 sphinxcontrib-napoleon
 sphinx-autobuild
+sphinx-autodoc-typehints
 GDAL==3.4.1
 GeoNode>=4.0
 
