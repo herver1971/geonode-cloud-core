@@ -1,6 +1,5 @@
 sphinx
 sphinx-intl
-sphinx-django
 sphinx-rtd-theme
 sphinxcontrib-openapi
 sphinxcontrib-napoleon
