@@ -29,29 +29,38 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y gdal-bin libgdal-dev
 
-    # 4. Set GDAL environment variables (optional but often needed)
+    # 4. Set GDAL environment variables
     - name: Set GDAL environment variables
       run: |
         export CPLUS_INCLUDE_PATH=/usr/include/gdal
         export C_INCLUDE_PATH=/usr/include/gdal
 
-    # 5. Install Python dependencies (including GDAL)
+    # 5. Clear pip cache (optional but recommended for a clean build)
+    - name: Clear pip cache
+      run: |
+        sudo rm -rf ~/.cache/pip
+
+    # 6. Install Python dependencies in a virtual environment
     - name: Install dependencies
       run: |
+        python -m venv venv
+        source venv/bin/activate
         python -m pip install --upgrade pip
         pip install -r docs/requirements.txt
 
-    # 6. Run sphinx-apidoc
+    # 7. Run sphinx-apidoc
     - name: Generate API documentation
       run: |
+        source venv/bin/activate
         sphinx-apidoc -o docs ./
 
-    # 7. Build the HTML docs (opcional)
+    # 8. Build the HTML docs
     - name: Build HTML documentation
       run: |
+        source venv/bin/activate
         sphinx-build -b html docs docs/_build/html
 
-    # 8. Commit and push the generated documentation
+    # 9. Commit and push the generated documentation
     - name: Commit and push changes
       run: |
         git config --global user.name 'github-actions[bot]'
@@ -61,5 +70,3 @@ jobs:
         git push origin HEAD:main  # Forzar el push a la rama main
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-
