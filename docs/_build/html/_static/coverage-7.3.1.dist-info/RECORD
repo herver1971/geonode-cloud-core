@@ -1,6 +1,6 @@
-../../../bin/coverage,sha256=TPVL3SvkImSMmU08RNNgsZo8ulqzDAhGDLPvrn3sYuw,249
-../../../bin/coverage-3.10,sha256=TPVL3SvkImSMmU08RNNgsZo8ulqzDAhGDLPvrn3sYuw,249
-../../../bin/coverage3,sha256=TPVL3SvkImSMmU08RNNgsZo8ulqzDAhGDLPvrn3sYuw,249
+../../../bin/coverage,sha256=s0SAzb_A_jCPYlun84suxl_lR5BqV4zVaiZlyJp9ZVc,270
+../../../bin/coverage-3.10,sha256=s0SAzb_A_jCPYlun84suxl_lR5BqV4zVaiZlyJp9ZVc,270
+../../../bin/coverage3,sha256=s0SAzb_A_jCPYlun84suxl_lR5BqV4zVaiZlyJp9ZVc,270
 coverage-7.3.1.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
 coverage-7.3.1.dist-info/LICENSE.txt,sha256=DVQuDIgE45qn836wDaWnYhSdxoLXgpRRKH4RuTjpRZQ,10174
 coverage-7.3.1.dist-info/METADATA,sha256=Zg_1u3ZkvWN6EE0faUWWg5U75RKyA8LE0sHjzTfvGVQ,8078

@@ -1,8 +1,8 @@
-../../../bin/csv2rdf,sha256=eUG9JsX0B8tFJRzxyproF82cEbnJhD3SS-DWyq2mdp8,253
-../../../bin/rdf2dot,sha256=q06iAWbWsmfuWrMH54w6l0WuuRUEuYAYoFgB0IE2QuA,253
-../../../bin/rdfgraphisomorphism,sha256=IsOT39F-ILGWZjM3cjhJuTkyBplqNQHqOUqXy6yeLR4,262
-../../../bin/rdfpipe,sha256=i0JGQ2nyorWykL0mtYGaxLpwR0kThGVGU6cPEQumGAI,253
-../../../bin/rdfs2dot,sha256=R2GeUIHF05r_JZM3_GNU3a9RVWR3fL8dXxtrn_jNdqQ,254
+../../../bin/csv2rdf,sha256=njlwxT8IG40SIJkK86JrJatHa13rstZ9f2KTo8IUyck,274
+../../../bin/rdf2dot,sha256=xL8Gobfb6XGVofmumQ7HRfia1lMEps8f6pM3BxDbHs8,274
+../../../bin/rdfgraphisomorphism,sha256=DEVOV6cxaOjrq0S5ks4_GLGW8QNifWX3uEukyzG0V0o,283
+../../../bin/rdfpipe,sha256=dk6g0iHcr_N7vThNCjTfoub-E3uf7FJ5cY0wPzasoOQ,274
+../../../bin/rdfs2dot,sha256=KAAHAshuCh0Aup70wElq3jL2Q2XD_JspFhDX4FdgAaE,275
 rdflib-6.3.2.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
 rdflib-6.3.2.dist-info/LICENSE,sha256=QLs8x8_kSarESidSixxxoZrGSCfW5n-YnnJVl1rHk9A,1524
 rdflib-6.3.2.dist-info/METADATA,sha256=km_cUCfi2a_TOwy4k3XqBIDmN7dj2mr0lR1aUKe7KAY,11572

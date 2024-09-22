@@ -1,4 +1,4 @@
-../../../bin/geopackage-validator,sha256=1zioUBWeZRxf3Hqy7rdixTb8pG9vf9C456oaskZyFD8,255
+../../../bin/geopackage-validator,sha256=nd7WfHcnttLRjo93TA9avJX8ViCjoyQMwZwI50xdYAA,276
 geopackage_validator/__init__.py,sha256=K0kGrhh1kzVisZcoSkeuJdC06rTwxufV05Vy2hOVGoo,22
 geopackage_validator/__pycache__/__init__.cpython-310.pyc,,
 geopackage_validator/__pycache__/cli.cpython-310.pyc,,
