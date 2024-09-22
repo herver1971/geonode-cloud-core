@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>geonode.base package &mdash; GeoNode Cloud Core 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=8d563738"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="geonode.base.api package" href="geonode.base.api.html" />
+    <link rel="prev" title="geonode.api package" href="geonode.api.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            GeoNode Cloud Core
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">geonode-cloud-core</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="create-envfile.html">create-envfile module</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="geonode.html">geonode package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="geonode.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="geonode.api.html">geonode.api package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">geonode.base package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.br.html">geonode.br package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.catalogue.html">geonode.catalogue package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.client.html">geonode.client package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.documents.html">geonode.documents package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.facets.html">geonode.facets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.favorite.html">geonode.favorite package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.geoapps.html">geonode.geoapps package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.geoserver.html">geonode.geoserver package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.groups.html">geonode.groups package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.harvesting.html">geonode.harvesting package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.invitations.html">geonode.invitations package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.layers.html">geonode.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.management_commands_http.html">geonode.management_commands_http package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.maps.html">geonode.maps package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.messaging.html">geonode.messaging package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.monitoring.html">geonode.monitoring package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.people.html">geonode.people package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.proxy.html">geonode.proxy package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.resource.html">geonode.resource package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.security.html">geonode.security package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.services.html">geonode.services package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.social.html">geonode.social package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.storage.html">geonode.storage package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.tasks.html">geonode.tasks package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.tests.html">geonode.tests package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.themes.html">geonode.themes package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.thumbs.html">geonode.thumbs package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.html">geonode.upload package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.apps">geonode.apps module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.celery_app">geonode.celery_app module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.compat">geonode.compat module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-context-processors-module">geonode.context_processors module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.custom_translations">geonode.custom_translations module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-decorators-module">geonode.decorators module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-loaders-module">geonode.loaders module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-notifications-backend-module">geonode.notifications_backend module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.notifications_helper">geonode.notifications_helper module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.serializer">geonode.serializer module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-settings-module">geonode.settings module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.singleton">geonode.singleton module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-sitemap-module">geonode.sitemap module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-urls-module">geonode.urls module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-utils-module">geonode.utils module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.version">geonode.version module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-views-module">geonode.views module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.wsgi">geonode.wsgi module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="manage.html">manage module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pavement.html">pavement module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup.html">setup module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tasks.html">tasks module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">GeoNode Cloud Core</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">geonode-cloud-core</a></li>
+          <li class="breadcrumb-item"><a href="geonode.html">geonode package</a></li>
+      <li class="breadcrumb-item active">geonode.base package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/geonode.base.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="geonode-base-package">
+<h1>geonode.base package<a class="headerlink" href="#geonode-base-package" title="Link to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="geonode.base.api.html">geonode.base.api package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.api.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.api.html#module-geonode.base.api.exceptions">geonode.base.api.exceptions module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.api.html#geonode.base.api.exceptions.InvalidResourceException"><code class="docutils literal notranslate"><span class="pre">InvalidResourceException</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.api.html#geonode.base.api.exceptions.InvalidResourceException.category"><code class="docutils literal notranslate"><span class="pre">InvalidResourceException.category</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.api.html#geonode.base.api.exceptions.InvalidResourceException.default_code"><code class="docutils literal notranslate"><span class="pre">InvalidResourceException.default_code</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.api.html#geonode.base.api.exceptions.InvalidResourceException.default_detail"><code class="docutils literal notranslate"><span class="pre">InvalidResourceException.default_detail</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.api.html#geonode.base.api.exceptions.InvalidResourceException.status_code"><code class="docutils literal notranslate"><span class="pre">InvalidResourceException.status_code</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.api.html#geonode.base.api.exceptions.geonode_exception_handler"><code class="docutils literal notranslate"><span class="pre">geonode_exception_handler()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.api.html#geonode-base-api-fields-module">geonode.base.api.fields module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.api.html#geonode-base-api-filters-module">geonode.base.api.filters module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.api.html#module-geonode.base.api.pagination">geonode.base.api.pagination module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.api.html#geonode.base.api.pagination.GeoNodeApiPagination"><code class="docutils literal notranslate"><span class="pre">GeoNodeApiPagination</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.api.html#geonode.base.api.pagination.GeoNodeApiPagination.get_paginated_response"><code class="docutils literal notranslate"><span class="pre">GeoNodeApiPagination.get_paginated_response()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.api.html#geonode.base.api.pagination.GeoNodeApiPagination.page"><code class="docutils literal notranslate"><span class="pre">GeoNodeApiPagination.page</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.api.html#geonode.base.api.pagination.GeoNodeApiPagination.page_size"><code class="docutils literal notranslate"><span class="pre">GeoNodeApiPagination.page_size</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.api.html#geonode.base.api.pagination.GeoNodeApiPagination.page_size_query_param"><code class="docutils literal notranslate"><span class="pre">GeoNodeApiPagination.page_size_query_param</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.api.html#geonode-base-api-permissions-module">geonode.base.api.permissions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.api.html#geonode-base-api-serializers-module">geonode.base.api.serializers module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.api.html#geonode-base-api-tests-module">geonode.base.api.tests module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.api.html#geonode-base-api-urls-module">geonode.base.api.urls module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.api.html#geonode-base-api-views-module">geonode.base.api.views module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.api.html#module-geonode.base.api">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geonode.base.management.html">geonode.base.management package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.management.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.management.commands.html">geonode.base.management.commands package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.management.commands.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.management.commands.html#geonode-base-management-commands-delete-resources-module">geonode.base.management.commands.delete_resources module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.management.commands.html#geonode-base-management-commands-dump-thesaurus-module">geonode.base.management.commands.dump_thesaurus module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.management.commands.html#geonode-base-management-commands-fixoauthuri-module">geonode.base.management.commands.fixoauthuri module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.management.commands.html#geonode-base-management-commands-fixsitename-module">geonode.base.management.commands.fixsitename module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.management.commands.html#module-geonode.base.management.commands.helpers">geonode.base.management.commands.helpers module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.management.commands.html#geonode-base-management-commands-load-thesaurus-module">geonode.base.management.commands.load_thesaurus module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.management.commands.html#geonode-base-management-commands-migrate-baseurl-module">geonode.base.management.commands.migrate_baseurl module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.management.commands.html#geonode-base-management-commands-migrate-notifications-module">geonode.base.management.commands.migrate_notifications module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.management.commands.html#geonode-base-management-commands-set-all-datasets-alternate-module">geonode.base.management.commands.set_all_datasets_alternate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.management.commands.html#geonode-base-management-commands-set-all-datasets-metadata-module">geonode.base.management.commands.set_all_datasets_metadata module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.management.commands.html#module-geonode.base.management.commands.squashmigrations">geonode.base.management.commands.squashmigrations module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.management.commands.html#module-geonode.base.management.commands">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.management.html#module-geonode.base.management">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geonode.base.migrations.html">geonode.base.migrations package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0027_auto_20170801_1228">geonode.base.migrations.0027_auto_20170801_1228 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0027_auto_20170801_1228.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0027_auto_20170801_1228.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0027_auto_20170801_1228.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0027_auto_20170801_1228_squashed_0037_auto_20190222_1347">geonode.base.migrations.0027_auto_20170801_1228_squashed_0037_auto_20190222_1347 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0027_auto_20170801_1228_squashed_0037_auto_20190222_1347.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0027_auto_20170801_1228_squashed_0037_auto_20190222_1347.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0027_auto_20170801_1228_squashed_0037_auto_20190222_1347.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0027_auto_20170801_1228_squashed_0037_auto_20190222_1347.Migration.replaces"><code class="docutils literal notranslate"><span class="pre">Migration.replaces</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0028_curatedthumbnail">geonode.base.migrations.0028_curatedthumbnail module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0028_curatedthumbnail.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0028_curatedthumbnail.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0028_curatedthumbnail.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0028_resourcebase_is_approved">geonode.base.migrations.0028_resourcebase_is_approved module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0028_resourcebase_is_approved.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0028_resourcebase_is_approved.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0028_resourcebase_is_approved.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0029_auto_20171114_0341">geonode.base.migrations.0029_auto_20171114_0341 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0029_auto_20171114_0341.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0029_auto_20171114_0341.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0029_auto_20171114_0341.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0029_resourcebase_last_updated">geonode.base.migrations.0029_resourcebase_last_updated module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0029_resourcebase_last_updated.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0029_resourcebase_last_updated.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0029_resourcebase_last_updated.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0030_auto_20180309_0833">geonode.base.migrations.0030_auto_20180309_0833 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0030_auto_20180309_0833.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0030_auto_20180309_0833.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0030_auto_20180309_0833.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0030_resourcebase_created">geonode.base.migrations.0030_resourcebase_created module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0030_resourcebase_created.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0030_resourcebase_created.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0030_resourcebase_created.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0031_auto_20180309_0837">geonode.base.migrations.0031_auto_20180309_0837 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0031_auto_20180309_0837.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0031_auto_20180309_0837.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0031_auto_20180309_0837.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0031_auto_20200114_1651">geonode.base.migrations.0031_auto_20200114_1651 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0031_auto_20200114_1651.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0031_auto_20200114_1651.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0031_auto_20200114_1651.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0032_auto_20180329_1844">geonode.base.migrations.0032_auto_20180329_1844 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0032_auto_20180329_1844.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0032_auto_20180329_1844.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0032_auto_20180329_1844.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0032_auto_20200115_1121">geonode.base.migrations.0032_auto_20200115_1121 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0032_auto_20200115_1121.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0032_auto_20200115_1121.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0032_auto_20200115_1121.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0033_auto_20180330_0951">geonode.base.migrations.0033_auto_20180330_0951 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0033_auto_20180330_0951.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0033_auto_20180330_0951.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0033_auto_20180330_0951.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0033_auto_20200115_1145">geonode.base.migrations.0033_auto_20200115_1145 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0033_auto_20200115_1145.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0033_auto_20200115_1145.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0033_auto_20200115_1145.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0034_auto_20180606_1543">geonode.base.migrations.0034_auto_20180606_1543 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0034_auto_20180606_1543.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0034_auto_20180606_1543.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0034_auto_20180606_1543.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#geonode-base-migrations-0034-auto-20200212-0410-module">geonode.base.migrations.0034_auto_20200212_0410 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0035_auto_20200212_0428">geonode.base.migrations.0035_auto_20200212_0428 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0035_auto_20200212_0428.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0035_auto_20200212_0428.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0035_auto_20200212_0428.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0035_resourcebase_dirty_state">geonode.base.migrations.0035_resourcebase_dirty_state module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0035_resourcebase_dirty_state.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0035_resourcebase_dirty_state.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0035_resourcebase_dirty_state.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0036_auto_20190129_1433">geonode.base.migrations.0036_auto_20190129_1433 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0036_auto_20190129_1433.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0036_auto_20190129_1433.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0036_auto_20190129_1433.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0036_resourcebase_doi">geonode.base.migrations.0036_resourcebase_doi module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0036_resourcebase_doi.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0036_resourcebase_doi.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0036_resourcebase_doi.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0037_auto_20190222_1347">geonode.base.migrations.0037_auto_20190222_1347 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0037_auto_20190222_1347.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0037_auto_20190222_1347.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0037_auto_20190222_1347.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0037_auto_20200305_1520">geonode.base.migrations.0037_auto_20200305_1520 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0037_auto_20200305_1520.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0037_auto_20200305_1520.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0037_auto_20200305_1520.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0038_auto_20200318_0953">geonode.base.migrations.0038_auto_20200318_0953 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0038_auto_20200318_0953.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0038_auto_20200318_0953.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0038_auto_20200318_0953.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0038_configuration">geonode.base.migrations.0038_configuration module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0038_configuration.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0038_configuration.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0038_configuration.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0038_delete_backup">geonode.base.migrations.0038_delete_backup module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0038_delete_backup.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0038_delete_backup.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0038_delete_backup.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0039_auto_20200321_1338">geonode.base.migrations.0039_auto_20200321_1338 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0039_auto_20200321_1338.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0039_auto_20200321_1338.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0039_auto_20200321_1338.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0040_merge_20200321_2245">geonode.base.migrations.0040_merge_20200321_2245 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0040_merge_20200321_2245.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0040_merge_20200321_2245.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0040_merge_20200321_2245.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0041_merge_20200323_1119">geonode.base.migrations.0041_merge_20200323_1119 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0041_merge_20200323_1119.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0041_merge_20200323_1119.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0041_merge_20200323_1119.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0042_auto_20200414_1554">geonode.base.migrations.0042_auto_20200414_1554 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0042_auto_20200414_1554.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0042_auto_20200414_1554.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0042_auto_20200414_1554.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0043_auto_20200527_0833">geonode.base.migrations.0043_auto_20200527_0833 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0043_auto_20200527_0833.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0043_auto_20200527_0833.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0043_auto_20200527_0833.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#geonode-base-migrations-0044-auto-20201001-1514-module">geonode.base.migrations.0044_auto_20201001_1514 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0044_resourcebase_bbox_polygon">geonode.base.migrations.0044_resourcebase_bbox_polygon module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0044_resourcebase_bbox_polygon.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0044_resourcebase_bbox_polygon.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0044_resourcebase_bbox_polygon.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0045_auto_20200507_0445">geonode.base.migrations.0045_auto_20200507_0445 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0045_auto_20200507_0445.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0045_auto_20200507_0445.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0045_auto_20200507_0445.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0046_merge_20201016_0937">geonode.base.migrations.0046_merge_20201016_0937 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0046_merge_20201016_0937.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0046_merge_20201016_0937.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0046_merge_20201016_0937.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0047_resourcebase_attribution">geonode.base.migrations.0047_resourcebase_attribution module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0047_resourcebase_attribution.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0047_resourcebase_attribution.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0047_resourcebase_attribution.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0048_auto_20201116_0914">geonode.base.migrations.0048_auto_20201116_0914 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0048_auto_20201116_0914.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0048_auto_20201116_0914.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0048_auto_20201116_0914.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0049_resourcebase_resource_type">geonode.base.migrations.0049_resourcebase_resource_type module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0049_resourcebase_resource_type.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0049_resourcebase_resource_type.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0049_resourcebase_resource_type.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0050_auto_20210201_1008">geonode.base.migrations.0050_auto_20210201_1008 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0050_auto_20210201_1008.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0050_auto_20210201_1008.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0050_auto_20210201_1008.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0051_auto_20210202_1656">geonode.base.migrations.0051_auto_20210202_1656 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0051_auto_20210202_1656.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0051_auto_20210202_1656.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0051_auto_20210202_1656.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0052_auto_20210205_1631">geonode.base.migrations.0052_auto_20210205_1631 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0052_auto_20210205_1631.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0052_auto_20210205_1631.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0052_auto_20210205_1631.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0053_auto_20210223_0905">geonode.base.migrations.0053_auto_20210223_0905 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0053_auto_20210223_0905.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0053_auto_20210223_0905.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0053_auto_20210223_0905.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0054_auto_20210223_1202">geonode.base.migrations.0054_auto_20210223_1202 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0054_auto_20210223_1202.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0054_auto_20210223_1202.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0054_auto_20210223_1202.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0055_auto_20210302_1109">geonode.base.migrations.0055_auto_20210302_1109 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0055_auto_20210302_1109.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0055_auto_20210302_1109.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0055_auto_20210302_1109.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0056_resourcebase_ll_bbox_polygon">geonode.base.migrations.0056_resourcebase_ll_bbox_polygon module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0056_resourcebase_ll_bbox_polygon.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0056_resourcebase_ll_bbox_polygon.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0056_resourcebase_ll_bbox_polygon.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0057_resourcebase_metadata_only">geonode.base.migrations.0057_resourcebase_metadata_only module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0057_resourcebase_metadata_only.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0057_resourcebase_metadata_only.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0057_resourcebase_metadata_only.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0058_thesaurus_order">geonode.base.migrations.0058_thesaurus_order module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0058_thesaurus_order.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0058_thesaurus_order.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0058_thesaurus_order.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#geonode-base-migrations-0059-fill-empty-resource-type-module">geonode.base.migrations.0059_fill_empty_resource_type module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0060_auto_20210512_1658">geonode.base.migrations.0060_auto_20210512_1658 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0060_auto_20210512_1658.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0060_auto_20210512_1658.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0060_auto_20210512_1658.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0060_resourcebase_state">geonode.base.migrations.0060_resourcebase_state module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0060_resourcebase_state.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0060_resourcebase_state.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0060_resourcebase_state.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0060_resourcebase_state.update_state_value"><code class="docutils literal notranslate"><span class="pre">update_state_value()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0061_auto_20211117_1238">geonode.base.migrations.0061_auto_20211117_1238 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0061_auto_20211117_1238.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0061_auto_20211117_1238.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0061_auto_20211117_1238.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0061_merge_0060_auto_20210512_1658_0060_resourcebase_state">geonode.base.migrations.0061_merge_0060_auto_20210512_1658_0060_resourcebase_state module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0061_merge_0060_auto_20210512_1658_0060_resourcebase_state.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0061_merge_0060_auto_20210512_1658_0060_resourcebase_state.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0061_merge_0060_auto_20210512_1658_0060_resourcebase_state.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0062_resourcebase_extra_metadata">geonode.base.migrations.0062_resourcebase_extra_metadata module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0062_resourcebase_extra_metadata.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0062_resourcebase_extra_metadata.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0062_resourcebase_extra_metadata.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0062_resourcebase_files">geonode.base.migrations.0062_resourcebase_files module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0062_resourcebase_files.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0062_resourcebase_files.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0062_resourcebase_files.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0063_alter_resourcebase_files">geonode.base.migrations.0063_alter_resourcebase_files module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0063_alter_resourcebase_files.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0063_alter_resourcebase_files.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0063_alter_resourcebase_files.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0063_auto_20220128_1042">geonode.base.migrations.0063_auto_20220128_1042 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0063_auto_20220128_1042.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0063_auto_20220128_1042.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0063_auto_20220128_1042.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#geonode-base-migrations-0064-alter-resourcebase-files-module">geonode.base.migrations.0064_alter_resourcebase_files module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0064_resourcebase_metadata">geonode.base.migrations.0064_resourcebase_metadata module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0064_resourcebase_metadata.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0064_resourcebase_metadata.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0064_resourcebase_metadata.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0065_alter_curatedthumbnail_img">geonode.base.migrations.0065_alter_curatedthumbnail_img module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0065_alter_curatedthumbnail_img.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0065_alter_curatedthumbnail_img.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0065_alter_curatedthumbnail_img.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0066_resourcebase_data">geonode.base.migrations.0066_resourcebase_data module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0066_resourcebase_data.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0066_resourcebase_data.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0066_resourcebase_data.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0067_resourcebase_storetype">geonode.base.migrations.0067_resourcebase_storetype module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0067_resourcebase_storetype.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0067_resourcebase_storetype.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0067_resourcebase_storetype.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0067_resourcebase_storetype.update_storetype_value"><code class="docutils literal notranslate"><span class="pre">update_storetype_value()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0068_rename_storetype_resourcebase_subtype">geonode.base.migrations.0068_rename_storetype_resourcebase_subtype module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0068_rename_storetype_resourcebase_subtype.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0068_rename_storetype_resourcebase_subtype.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0068_rename_storetype_resourcebase_subtype.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0069_resourcebase_sourcetype">geonode.base.migrations.0069_resourcebase_sourcetype module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0069_resourcebase_sourcetype.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0069_resourcebase_sourcetype.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0069_resourcebase_sourcetype.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0070_auto_20210720_1709">geonode.base.migrations.0070_auto_20210720_1709 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0070_auto_20210720_1709.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0070_auto_20210720_1709.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0070_auto_20210720_1709.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0071_remove_resourcebase_ows_url">geonode.base.migrations.0071_remove_resourcebase_ows_url module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0071_remove_resourcebase_ows_url.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0071_remove_resourcebase_ows_url.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0071_remove_resourcebase_ows_url.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0072_remove_resourcebase_detail_url">geonode.base.migrations.0072_remove_resourcebase_detail_url module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0072_remove_resourcebase_detail_url.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0072_remove_resourcebase_detail_url.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0072_remove_resourcebase_detail_url.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0073_resourcebase_thumbnail_path">geonode.base.migrations.0073_resourcebase_thumbnail_path module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0073_resourcebase_thumbnail_path.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0073_resourcebase_thumbnail_path.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0073_resourcebase_thumbnail_path.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#geonode-base-migrations-0074-drop-curated-thumbs-module">geonode.base.migrations.0074_drop_curated_thumbs module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0075_delete_curatedthumbnail">geonode.base.migrations.0075_delete_curatedthumbnail module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0075_delete_curatedthumbnail.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0075_delete_curatedthumbnail.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0075_delete_curatedthumbnail.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0076_auto_20220128_0919">geonode.base.migrations.0076_auto_20220128_0919 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0076_auto_20220128_0919.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0076_auto_20220128_0919.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0076_auto_20220128_0919.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0076_merge_20220204_1339">geonode.base.migrations.0076_merge_20220204_1339 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0076_merge_20220204_1339.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0076_merge_20220204_1339.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0076_merge_20220204_1339.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0077_merge_20220204_1347">geonode.base.migrations.0077_merge_20220204_1347 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0077_merge_20220204_1347.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0077_merge_20220204_1347.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0077_merge_20220204_1347.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0078_alter_resourcebase_metadata">geonode.base.migrations.0078_alter_resourcebase_metadata module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0078_alter_resourcebase_metadata.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0078_alter_resourcebase_metadata.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0078_alter_resourcebase_metadata.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0079_alter_resourcebase_alternate">geonode.base.migrations.0079_alter_resourcebase_alternate module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0079_alter_resourcebase_alternate.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0079_alter_resourcebase_alternate.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0079_alter_resourcebase_alternate.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0080_alter_resourcebase_uuid">geonode.base.migrations.0080_alter_resourcebase_uuid module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0080_alter_resourcebase_uuid.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0080_alter_resourcebase_uuid.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0080_alter_resourcebase_uuid.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0081_alter_resourcebase_alternate">geonode.base.migrations.0081_alter_resourcebase_alternate module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0081_alter_resourcebase_alternate.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0081_alter_resourcebase_alternate.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0081_alter_resourcebase_alternate.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0082_remove_dialogos_comment">geonode.base.migrations.0082_remove_dialogos_comment module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0082_remove_dialogos_comment.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0082_remove_dialogos_comment.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0082_remove_dialogos_comment.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#geonode-base-migrations-0083-clean-resources-with-missing-thumb-module">geonode.base.migrations.0083_clean_resources_with_missing_thumb module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#geonode-base-migrations-0084-remove-comments-from-actions-module">geonode.base.migrations.0084_remove_comments_from_actions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0085_alter_resourcebase_uuid">geonode.base.migrations.0085_alter_resourcebase_uuid module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0085_alter_resourcebase_uuid.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0085_alter_resourcebase_uuid.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0085_alter_resourcebase_uuid.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0086_linkedresource">geonode.base.migrations.0086_linkedresource module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0086_linkedresource.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0086_linkedresource.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0086_linkedresource.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0087_thesauruskeyword_icon">geonode.base.migrations.0087_thesauruskeyword_icon module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0087_thesauruskeyword_icon.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0087_thesauruskeyword_icon.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0087_thesauruskeyword_icon.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.0088_auto_20231019_1244">geonode.base.migrations.0088_auto_20231019_1244 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0088_auto_20231019_1244.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0088_auto_20231019_1244.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.0088_auto_20231019_1244.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#geonode-base-migrations-24-initial-module">geonode.base.migrations.24_initial module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#geonode-base-migrations-24-to-26-module">geonode.base.migrations.24_to_26 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations.26_to_27">geonode.base.migrations.26_to_27 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.26_to_27.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.26_to_27.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.migrations.html#geonode.base.migrations.26_to_27.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.migrations.html#module-geonode.base.migrations">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geonode.base.templatetags.html">geonode.base.templatetags package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.templatetags.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.templatetags.html#geonode-base-templatetags-base-tags-module">geonode.base.templatetags.base_tags module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.templatetags.html#module-geonode.base.templatetags.sanitize_html">geonode.base.templatetags.sanitize_html module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.templatetags.html#geonode.base.templatetags.sanitize_html.sanitize_html"><code class="docutils literal notranslate"><span class="pre">sanitize_html()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.templatetags.html#geonode-base-templatetags-thesaurus-module">geonode.base.templatetags.thesaurus module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.templatetags.html#module-geonode.base.templatetags.user_messages">geonode.base.templatetags.user_messages module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.templatetags.html#geonode.base.templatetags.user_messages.format_senders"><code class="docutils literal notranslate"><span class="pre">format_senders()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.templatetags.html#geonode.base.templatetags.user_messages.get_item"><code class="docutils literal notranslate"><span class="pre">get_item()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.templatetags.html#geonode.base.templatetags.user_messages.is_unread"><code class="docutils literal notranslate"><span class="pre">is_unread()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.templatetags.html#geonode.base.templatetags.user_messages.random_uuid"><code class="docutils literal notranslate"><span class="pre">random_uuid()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.base.templatetags.html#geonode.base.templatetags.user_messages.show_notification"><code class="docutils literal notranslate"><span class="pre">show_notification()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.base.templatetags.html#module-geonode.base.templatetags">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="geonode-base-admin-module">
+<h2>geonode.base.admin module<a class="headerlink" href="#geonode-base-admin-module" title="Link to this heading"></a></h2>
+</section>
+<section id="geonode-base-auth-module">
+<h2>geonode.base.auth module<a class="headerlink" href="#geonode-base-auth-module" title="Link to this heading"></a></h2>
+</section>
+<section id="module-geonode.base.bbox_utils">
+<span id="geonode-base-bbox-utils-module"></span><h2>geonode.base.bbox_utils module<a class="headerlink" href="#module-geonode.base.bbox_utils" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="geonode.base.bbox_utils.BBOXHelper">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geonode.base.bbox_utils.</span></span><span class="sig-name descname"><span class="pre">BBOXHelper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minmaxform</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/base/bbox_utils.html#BBOXHelper"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.base.bbox_utils.BBOXHelper" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A bounding box representation to avoid use of list indices when
+dealing with bounding boxes.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.base.bbox_utils.BBOXHelper.as_polygon">
+<span class="sig-name descname"><span class="pre">as_polygon</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/base/bbox_utils.html#BBOXHelper.as_polygon"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.base.bbox_utils.BBOXHelper.as_polygon" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.base.bbox_utils.BBOXHelper.from_xy">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_xy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/base/bbox_utils.html#BBOXHelper.from_xy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.base.bbox_utils.BBOXHelper.from_xy" title="Link to this definition"></a></dt>
+<dd><p>Constructs a <cite>BBOXHelper</cite> instance from coordinates in “xy” format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>xy</strong> – collection of coordinates as [xmin, xmax, ymin, ymax]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geonode.base.bbox_utils.check_crossing">
+<span class="sig-prename descclassname"><span class="pre">geonode.base.bbox_utils.</span></span><span class="sig-name descname"><span class="pre">check_crossing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lon1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dlon_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">180.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/base/bbox_utils.html#check_crossing"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.base.bbox_utils.check_crossing" title="Link to this definition"></a></dt>
+<dd><p>ref.: <a class="reference external" href="https://towardsdatascience.com/around-the-world-in-80-lines-crossing-the-antimeridian-with-python-and-shapely-c87c9b6e1513">https://towardsdatascience.com/around-the-world-in-80-lines-crossing-the-antimeridian-with-python-and-shapely-c87c9b6e1513</a>
+Assuming a minimum travel distance between two provided longitude coordinates,
+checks if the 180th meridian (antimeridian) is crossed.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geonode.base.bbox_utils.filter_bbox">
+<span class="sig-prename descclassname"><span class="pre">geonode.base.bbox_utils.</span></span><span class="sig-name descname"><span class="pre">filter_bbox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">queryset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bbox</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/base/bbox_utils.html#filter_bbox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.base.bbox_utils.filter_bbox" title="Link to this definition"></a></dt>
+<dd><p>Filters a queryset by a provided bounding box.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>bbox</strong> – Comma-separated coordinates as “xmin,ymin,xmax,ymax”</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geonode.base.bbox_utils.normalize_x_value">
+<span class="sig-prename descclassname"><span class="pre">geonode.base.bbox_utils.</span></span><span class="sig-name descname"><span class="pre">normalize_x_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/base/bbox_utils.html#normalize_x_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.base.bbox_utils.normalize_x_value" title="Link to this definition"></a></dt>
+<dd><p>Normalise x-axis value/longtitude to fall within [-180, 180]</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geonode.base.bbox_utils.polygon_from_bbox">
+<span class="sig-prename descclassname"><span class="pre">geonode.base.bbox_utils.</span></span><span class="sig-name descname"><span class="pre">polygon_from_bbox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bbox</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">srid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4326</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/base/bbox_utils.html#polygon_from_bbox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.base.bbox_utils.polygon_from_bbox" title="Link to this definition"></a></dt>
+<dd><p>Constructs a Polygon object with srid from a provided bbox.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geonode.base.bbox_utils.split_polygon">
+<span class="sig-prename descclassname"><span class="pre">geonode.base.bbox_utils.</span></span><span class="sig-name descname"><span class="pre">split_polygon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geojson</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'geojson'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/base/bbox_utils.html#split_polygon"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.base.bbox_utils.split_polygon" title="Link to this definition"></a></dt>
+<dd><p>ref.: <a class="reference external" href="https://towardsdatascience.com/around-the-world-in-80-lines-crossing-the-antimeridian-with-python-and-shapely-c87c9b6e1513">https://towardsdatascience.com/around-the-world-in-80-lines-crossing-the-antimeridian-with-python-and-shapely-c87c9b6e1513</a>
+Given a GeoJSON representation of a Polygon, returns a collection of
+‘antimeridian-safe’ constituent polygons split at the 180th meridian,
+ensuring compliance with GeoJSON standards (<a class="reference external" href="https://tools.ietf.org/html/rfc7946#section-3.1.9">https://tools.ietf.org/html/rfc7946#section-3.1.9</a>)
+Assumptions:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Any two consecutive points with over 180 degrees difference in
+longitude are assumed to cross the antimeridian</p></li>
+<li><p>The polygon spans less than 360 degrees in longitude (i.e. does not wrap around the globe)</p></li>
+<li><p>However, the polygon may cross the antimeridian on multiple occasions</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>geojson</strong> (<em>dict</em>) – <p>GeoJSON of input polygon to be split. For example:
+{
+“type”: “Polygon”,
+“coordinates”: [</p>
+<blockquote>
+<div><dl class="simple">
+<dt>[</dt><dd><p>[179.0, 0.0], [-179.0, 0.0], [-179.0, 1.0],
+[179.0, 1.0], [179.0, 0.0]</p>
+</dd>
+</dl>
+<p>]</p>
+</div></blockquote>
+</p></li>
+<li><p><strong>output_format</strong> (<em>str</em>) – Available options: “geojson”, “polygons”, “geometrycollection”
+If “geometrycollection” returns a Shapely GeometryCollection.
+Otherwise, returns a list of either GeoJSONs or Shapely Polygons</p></li>
+<li><p><strong>validate</strong> (<em>bool</em>) – Checks if all longitudes are within [-180.0, 180.0]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>antimeridian-safe polygon(s)</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[dict]/List[Polygon]/GeometryCollection</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geonode.base.bbox_utils.translate_polygons">
+<span class="sig-prename descclassname"><span class="pre">geonode.base.bbox_utils.</span></span><span class="sig-name descname"><span class="pre">translate_polygons</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geometry_collection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'geojson'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/base/bbox_utils.html#translate_polygons"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.base.bbox_utils.translate_polygons" title="Link to this definition"></a></dt>
+<dd><p>ref.: <a class="reference external" href="https://towardsdatascience.com/around-the-world-in-80-lines-crossing-the-antimeridian-with-python-and-shapely-c87c9b6e1513">https://towardsdatascience.com/around-the-world-in-80-lines-crossing-the-antimeridian-with-python-and-shapely-c87c9b6e1513</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Generator</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Polygon</span></code>]], <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-geonode.base.enumerations">
+<span id="geonode-base-enumerations-module"></span><h2>geonode.base.enumerations module<a class="headerlink" href="#module-geonode.base.enumerations" title="Link to this heading"></a></h2>
+</section>
+<section id="module-geonode.base.fields">
+<span id="geonode-base-fields-module"></span><h2>geonode.base.fields module<a class="headerlink" href="#module-geonode.base.fields" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="geonode.base.fields.MultiThesauriField">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geonode.base.fields.</span></span><span class="sig-name descname"><span class="pre">MultiThesauriField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">queryset</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/base/fields.html#MultiThesauriField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.base.fields.MultiThesauriField" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelMultipleChoiceField</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.base.fields.MultiThesauriField.label_from_instance">
+<span class="sig-name descname"><span class="pre">label_from_instance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/base/fields.html#MultiThesauriField.label_from_instance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.base.fields.MultiThesauriField.label_from_instance" title="Link to this definition"></a></dt>
+<dd><p>Convert objects into strings and generate the labels for the choices
+presented by this object. Subclasses can override this method to
+customize the display of the choices.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="geonode-base-forms-module">
+<h2>geonode.base.forms module<a class="headerlink" href="#geonode-base-forms-module" title="Link to this heading"></a></h2>
+</section>
+<section id="geonode-base-middleware-module">
+<h2>geonode.base.middleware module<a class="headerlink" href="#geonode-base-middleware-module" title="Link to this heading"></a></h2>
+</section>
+<section id="geonode-base-models-module">
+<h2>geonode.base.models module<a class="headerlink" href="#geonode-base-models-module" title="Link to this heading"></a></h2>
+</section>
+<section id="geonode-base-populate-test-data-module">
+<h2>geonode.base.populate_test_data module<a class="headerlink" href="#geonode-base-populate-test-data-module" title="Link to this heading"></a></h2>
+</section>
+<section id="geonode-base-tests-module">
+<h2>geonode.base.tests module<a class="headerlink" href="#geonode-base-tests-module" title="Link to this heading"></a></h2>
+</section>
+<section id="geonode-base-translation-module">
+<h2>geonode.base.translation module<a class="headerlink" href="#geonode-base-translation-module" title="Link to this heading"></a></h2>
+</section>
+<section id="geonode-base-urls-module">
+<h2>geonode.base.urls module<a class="headerlink" href="#geonode-base-urls-module" title="Link to this heading"></a></h2>
+</section>
+<section id="geonode-base-utils-module">
+<h2>geonode.base.utils module<a class="headerlink" href="#geonode-base-utils-module" title="Link to this heading"></a></h2>
+</section>
+<section id="geonode-base-views-module">
+<h2>geonode.base.views module<a class="headerlink" href="#geonode-base-views-module" title="Link to this heading"></a></h2>
+</section>
+<section id="module-geonode.base.widgets">
+<span id="geonode-base-widgets-module"></span><h2>geonode.base.widgets module<a class="headerlink" href="#module-geonode.base.widgets" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="geonode.base.widgets.TaggitProfileSelect2Custom">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geonode.base.widgets.</span></span><span class="sig-name descname"><span class="pre">TaggitProfileSelect2Custom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forward</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/base/widgets.html#TaggitProfileSelect2Custom"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.base.widgets.TaggitProfileSelect2Custom" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TaggitSelect2</span></code></p>
+<p>Overriding Select2 tag widget for ContactRoleField.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="geonode.base.widgets.TaggitProfileSelect2Custom.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#geonode.base.widgets.TaggitProfileSelect2Custom.media" title="Link to this definition"></a></dt>
+<dd><p>Return JS/CSS resources for the widget.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.base.widgets.TaggitProfileSelect2Custom.value_from_datadict">
+<span class="sig-name descname"><span class="pre">value_from_datadict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/base/widgets.html#TaggitProfileSelect2Custom.value_from_datadict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.base.widgets.TaggitProfileSelect2Custom.value_from_datadict" title="Link to this definition"></a></dt>
+<dd><p>Handle multi-profiles.</p>
+<p>returns list of selected elements</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="geonode.base.widgets.TaggitSelect2Custom">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geonode.base.widgets.</span></span><span class="sig-name descname"><span class="pre">TaggitSelect2Custom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forward</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/base/widgets.html#TaggitSelect2Custom"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.base.widgets.TaggitSelect2Custom" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TaggitSelect2</span></code></p>
+<p>Overriding Select2 tag widget for taggit’s TagField.
+Fixes error in tests where ‘value’ is None.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="geonode.base.widgets.TaggitSelect2Custom.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#geonode.base.widgets.TaggitSelect2Custom.media" title="Link to this definition"></a></dt>
+<dd><p>Return JS/CSS resources for the widget.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.base.widgets.TaggitSelect2Custom.value_from_datadict">
+<span class="sig-name descname"><span class="pre">value_from_datadict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/base/widgets.html#TaggitSelect2Custom.value_from_datadict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.base.widgets.TaggitSelect2Custom.value_from_datadict" title="Link to this definition"></a></dt>
+<dd><p>Handle multi-word tag.</p>
+<p>Insure there’s a comma when there’s only a single multi-word tag,
+or tag “Multi word” would end up as “Multi” and “word”.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-geonode.base">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-geonode.base" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="geonode.base.BaseAppConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geonode.base.</span></span><span class="sig-name descname"><span class="pre">BaseAppConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_module</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/base.html#BaseAppConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.base.BaseAppConfig" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="geonode.html#geonode.notifications_helper.NotificationsAppConfigBase" title="geonode.notifications_helper.NotificationsAppConfigBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">NotificationsAppConfigBase</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.base.BaseAppConfig.NOTIFICATIONS">
+<span class="sig-name descname"><span class="pre">NOTIFICATIONS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('request_download_resourcebase',</span> <span class="pre">'Request</span> <span class="pre">to</span> <span class="pre">download</span> <span class="pre">a</span> <span class="pre">resource',</span> <span class="pre">'A</span> <span class="pre">request</span> <span class="pre">for</span> <span class="pre">downloading</span> <span class="pre">a</span> <span class="pre">resource</span> <span class="pre">was</span> <span class="pre">sent'),</span> <span class="pre">('request_resource_edit',</span> <span class="pre">'Request</span> <span class="pre">resource</span> <span class="pre">change',</span> <span class="pre">'Owner</span> <span class="pre">has</span> <span class="pre">requested</span> <span class="pre">permissions</span> <span class="pre">to</span> <span class="pre">modify</span> <span class="pre">a</span> <span class="pre">resource'))</span></em><a class="headerlink" href="#geonode.base.BaseAppConfig.NOTIFICATIONS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.base.BaseAppConfig.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'geonode.base'</span></em><a class="headerlink" href="#geonode.base.BaseAppConfig.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geonode.base.register_event">
+<span class="sig-prename descclassname"><span class="pre">geonode.base.</span></span><span class="sig-name descname"><span class="pre">register_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resource</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/base.html#register_event"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.base.register_event" title="Link to this definition"></a></dt>
+<dd><p>Wrapper function to be used inside views to collect event and resource</p>
+<p>&#64;param request Request object
+&#64;param event_type name of event type
+&#64;param resource string (then resource type will be url) or Resource instance</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">geonode.base</span> <span class="kn">import</span> <span class="n">register_event</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">view</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<span class="go">        register_event(request, &#39;view&#39;, layer)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geonode.base.register_proxy_event">
+<span class="sig-prename descclassname"><span class="pre">geonode.base.</span></span><span class="sig-name descname"><span class="pre">register_proxy_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/base.html#register_proxy_event"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.base.register_proxy_event" title="Link to this definition"></a></dt>
+<dd><p>Process request to geoserver proxy. Extract layer and ows type</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geonode.base.register_url_event">
+<span class="sig-prename descclassname"><span class="pre">geonode.base.</span></span><span class="sig-name descname"><span class="pre">register_url_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/base.html#register_url_event"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.base.register_url_event" title="Link to this definition"></a></dt>
+<dd><p>Decorator on views, which will register url event</p>
+<p>usage:
+&gt;&gt; register_url_event()(TemplateView.view_as_view())</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="geonode.api.html" class="btn btn-neutral float-left" title="geonode.api package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="geonode.base.api.html" class="btn btn-neutral float-right" title="geonode.base.api package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Kan Territory &amp; IT.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

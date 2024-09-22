@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>geonode.br.management.commands.utils package &mdash; GeoNode Cloud Core 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=8d563738"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="geonode.br.migrations package" href="geonode.br.migrations.html" />
+    <link rel="prev" title="geonode.br.management.commands package" href="geonode.br.management.commands.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            GeoNode Cloud Core
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">geonode-cloud-core</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="create-envfile.html">create-envfile module</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="geonode.html">geonode package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="geonode.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="geonode.api.html">geonode.api package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.html">geonode.base package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="geonode.br.html">geonode.br package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.catalogue.html">geonode.catalogue package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.client.html">geonode.client package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.documents.html">geonode.documents package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.facets.html">geonode.facets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.favorite.html">geonode.favorite package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.geoapps.html">geonode.geoapps package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.geoserver.html">geonode.geoserver package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.groups.html">geonode.groups package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.harvesting.html">geonode.harvesting package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.invitations.html">geonode.invitations package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.layers.html">geonode.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.management_commands_http.html">geonode.management_commands_http package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.maps.html">geonode.maps package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.messaging.html">geonode.messaging package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.monitoring.html">geonode.monitoring package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.people.html">geonode.people package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.proxy.html">geonode.proxy package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.resource.html">geonode.resource package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.security.html">geonode.security package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.services.html">geonode.services package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.social.html">geonode.social package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.storage.html">geonode.storage package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.tasks.html">geonode.tasks package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.tests.html">geonode.tests package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.themes.html">geonode.themes package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.thumbs.html">geonode.thumbs package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.html">geonode.upload package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.apps">geonode.apps module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.celery_app">geonode.celery_app module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.compat">geonode.compat module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-context-processors-module">geonode.context_processors module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.custom_translations">geonode.custom_translations module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-decorators-module">geonode.decorators module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-loaders-module">geonode.loaders module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-notifications-backend-module">geonode.notifications_backend module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.notifications_helper">geonode.notifications_helper module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.serializer">geonode.serializer module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-settings-module">geonode.settings module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.singleton">geonode.singleton module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-sitemap-module">geonode.sitemap module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-urls-module">geonode.urls module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-utils-module">geonode.utils module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.version">geonode.version module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-views-module">geonode.views module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.wsgi">geonode.wsgi module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="manage.html">manage module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pavement.html">pavement module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup.html">setup module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tasks.html">tasks module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">GeoNode Cloud Core</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">geonode-cloud-core</a></li>
+          <li class="breadcrumb-item"><a href="geonode.html">geonode package</a></li>
+          <li class="breadcrumb-item"><a href="geonode.br.html">geonode.br package</a></li>
+          <li class="breadcrumb-item"><a href="geonode.br.management.html">geonode.br.management package</a></li>
+          <li class="breadcrumb-item"><a href="geonode.br.management.commands.html">geonode.br.management.commands package</a></li>
+      <li class="breadcrumb-item active">geonode.br.management.commands.utils package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/geonode.br.management.commands.utils.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="geonode-br-management-commands-utils-package">
+<h1>geonode.br.management.commands.utils package<a class="headerlink" href="#geonode-br-management-commands-utils-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-geonode.br.management.commands.utils.utils">
+<span id="geonode-br-management-commands-utils-utils-module"></span><h2>geonode.br.management.commands.utils.utils module<a class="headerlink" href="#module-geonode.br.management.commands.utils.utils" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="geonode.br.management.commands.utils.utils.Config">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geonode.br.management.commands.utils.utils.</span></span><span class="sig-name descname"><span class="pre">Config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">options</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/br/management/commands/utils/utils.html#Config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.br.management.commands.utils.utils.Config" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geonode.br.management.commands.utils.utils.confirm">
+<span class="sig-prename descclassname"><span class="pre">geonode.br.management.commands.utils.utils.</span></span><span class="sig-name descname"><span class="pre">confirm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prompt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/br/management/commands/utils/utils.html#confirm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.br.management.commands.utils.utils.confirm" title="Link to this definition"></a></dt>
+<dd><p>prompts for yes or no response from the user. Returns True for yes and
+False for no.</p>
+<p>‘resp’ should be set to the default value assumed by the caller when
+user simply types ENTER.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">confirm</span><span class="p">(</span><span class="n">prompt</span><span class="o">=</span><span class="s1">&#39;Create Directory?&#39;</span><span class="p">,</span> <span class="n">resp</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="go">Create Directory? [y]|n:</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">confirm</span><span class="p">(</span><span class="n">prompt</span><span class="o">=</span><span class="s1">&#39;Create Directory?&#39;</span><span class="p">,</span> <span class="n">resp</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="go">Create Directory? [n]|y:</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">confirm</span><span class="p">(</span><span class="n">prompt</span><span class="o">=</span><span class="s1">&#39;Create Directory?&#39;</span><span class="p">,</span> <span class="n">resp</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="go">Create Directory? [n]|y: y</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geonode.br.management.commands.utils.utils.dump_db">
+<span class="sig-prename descclassname"><span class="pre">geonode.br.management.commands.utils.utils.</span></span><span class="sig-name descname"><span class="pre">dump_db</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_port</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_host</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_passwd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_folder</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/br/management/commands/utils/utils.html#dump_db"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.br.management.commands.utils.utils.dump_db" title="Link to this definition"></a></dt>
+<dd><p>Dump Full DB into target folder</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geonode.br.management.commands.utils.utils.empty_folder">
+<span class="sig-prename descclassname"><span class="pre">geonode.br.management.commands.utils.utils.</span></span><span class="sig-name descname"><span class="pre">empty_folder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folder</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/br/management/commands/utils/utils.html#empty_folder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.br.management.commands.utils.utils.empty_folder" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geonode.br.management.commands.utils.utils.geoserver_option_list">
+<span class="sig-prename descclassname"><span class="pre">geonode.br.management.commands.utils.utils.</span></span><span class="sig-name descname"><span class="pre">geoserver_option_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/br/management/commands/utils/utils.html#geoserver_option_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.br.management.commands.utils.utils.geoserver_option_list" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geonode.br.management.commands.utils.utils.get_db_conn">
+<span class="sig-prename descclassname"><span class="pre">geonode.br.management.commands.utils.utils.</span></span><span class="sig-name descname"><span class="pre">get_db_conn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_port</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_host</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_passwd</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/br/management/commands/utils/utils.html#get_db_conn"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.br.management.commands.utils.utils.get_db_conn" title="Link to this definition"></a></dt>
+<dd><p>Get db conn (GeoNode)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geonode.br.management.commands.utils.utils.get_tables">
+<span class="sig-prename descclassname"><span class="pre">geonode.br.management.commands.utils.utils.</span></span><span class="sig-name descname"><span class="pre">get_tables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_passwd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_host</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'localhost'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5432</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/br/management/commands/utils/utils.html#get_tables"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.br.management.commands.utils.utils.get_tables" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geonode.br.management.commands.utils.utils.glob2re">
+<span class="sig-prename descclassname"><span class="pre">geonode.br.management.commands.utils.utils.</span></span><span class="sig-name descname"><span class="pre">glob2re</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pat</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/br/management/commands/utils/utils.html#glob2re"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.br.management.commands.utils.utils.glob2re" title="Link to this definition"></a></dt>
+<dd><p>Translate a shell PATTERN to a regular expression.</p>
+<p>There is no way to quote meta-characters.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geonode.br.management.commands.utils.utils.glob_filter">
+<span class="sig-prename descclassname"><span class="pre">geonode.br.management.commands.utils.utils.</span></span><span class="sig-name descname"><span class="pre">glob_filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pat</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/br/management/commands/utils/utils.html#glob_filter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.br.management.commands.utils.utils.glob_filter" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geonode.br.management.commands.utils.utils.ignore_time">
+<span class="sig-prename descclassname"><span class="pre">geonode.br.management.commands.utils.utils.</span></span><span class="sig-name descname"><span class="pre">ignore_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cmp_operator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iso_date</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/br/management/commands/utils/utils.html#ignore_time"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.br.management.commands.utils.utils.ignore_time" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geonode.br.management.commands.utils.utils.md5_file_hash">
+<span class="sig-prename descclassname"><span class="pre">geonode.br.management.commands.utils.utils.</span></span><span class="sig-name descname"><span class="pre">md5_file_hash</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/br/management/commands/utils/utils.html#md5_file_hash"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.br.management.commands.utils.utils.md5_file_hash" title="Link to this definition"></a></dt>
+<dd><p>A method generating MD5 hash of the provided file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>file_path</strong> – file’s path with an extension, which will be opened for reading and generating md5 hash</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>hex representation of md5 hash</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geonode.br.management.commands.utils.utils.option">
+<span class="sig-prename descclassname"><span class="pre">geonode.br.management.commands.utils.utils.</span></span><span class="sig-name descname"><span class="pre">option</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/br/management/commands/utils/utils.html#option"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.br.management.commands.utils.utils.option" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geonode.br.management.commands.utils.utils.remove_existing_tables">
+<span class="sig-prename descclassname"><span class="pre">geonode.br.management.commands.utils.utils.</span></span><span class="sig-name descname"><span class="pre">remove_existing_tables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_port</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_host</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_passwd</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/br/management/commands/utils/utils.html#remove_existing_tables"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.br.management.commands.utils.utils.remove_existing_tables" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geonode.br.management.commands.utils.utils.restore_db">
+<span class="sig-prename descclassname"><span class="pre">geonode.br.management.commands.utils.utils.</span></span><span class="sig-name descname"><span class="pre">restore_db</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_port</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_host</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_passwd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_folder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preserve_tables</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/br/management/commands/utils/utils.html#restore_db"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.br.management.commands.utils.utils.restore_db" title="Link to this definition"></a></dt>
+<dd><p>Restore Full DB into target folder</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geonode.br.management.commands.utils.utils.setup_logger">
+<span class="sig-prename descclassname"><span class="pre">geonode.br.management.commands.utils.utils.</span></span><span class="sig-name descname"><span class="pre">setup_logger</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/br/management/commands/utils/utils.html#setup_logger"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.br.management.commands.utils.utils.setup_logger" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geonode.br.management.commands.utils.utils.truncate_tables">
+<span class="sig-prename descclassname"><span class="pre">geonode.br.management.commands.utils.utils.</span></span><span class="sig-name descname"><span class="pre">truncate_tables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_port</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_host</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_passwd</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/br/management/commands/utils/utils.html#truncate_tables"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.br.management.commands.utils.utils.truncate_tables" title="Link to this definition"></a></dt>
+<dd><p>HARD Truncate all DB Tables</p>
+</dd></dl>
+
+</section>
+<section id="module-geonode.br.management.commands.utils">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-geonode.br.management.commands.utils" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="geonode.br.management.commands.html" class="btn btn-neutral float-left" title="geonode.br.management.commands package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="geonode.br.migrations.html" class="btn btn-neutral float-right" title="geonode.br.migrations package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Kan Territory &amp; IT.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

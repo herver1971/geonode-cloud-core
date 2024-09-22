@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>geonode.storage package &mdash; GeoNode Cloud Core 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=8d563738"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="geonode.tasks package" href="geonode.tasks.html" />
+    <link rel="prev" title="geonode.social.templatetags package" href="geonode.social.templatetags.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            GeoNode Cloud Core
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">geonode-cloud-core</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="create-envfile.html">create-envfile module</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="geonode.html">geonode package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="geonode.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="geonode.api.html">geonode.api package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.base.html">geonode.base package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.br.html">geonode.br package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.catalogue.html">geonode.catalogue package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.client.html">geonode.client package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.documents.html">geonode.documents package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.facets.html">geonode.facets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.favorite.html">geonode.favorite package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.geoapps.html">geonode.geoapps package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.geoserver.html">geonode.geoserver package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.groups.html">geonode.groups package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.harvesting.html">geonode.harvesting package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.invitations.html">geonode.invitations package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.layers.html">geonode.layers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.management_commands_http.html">geonode.management_commands_http package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.maps.html">geonode.maps package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.messaging.html">geonode.messaging package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.monitoring.html">geonode.monitoring package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.people.html">geonode.people package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.proxy.html">geonode.proxy package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.resource.html">geonode.resource package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.security.html">geonode.security package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.services.html">geonode.services package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.social.html">geonode.social package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">geonode.storage package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.tasks.html">geonode.tasks package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.tests.html">geonode.tests package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.themes.html">geonode.themes package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.thumbs.html">geonode.thumbs package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.upload.html">geonode.upload package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.apps">geonode.apps module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.celery_app">geonode.celery_app module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.compat">geonode.compat module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-context-processors-module">geonode.context_processors module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.custom_translations">geonode.custom_translations module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-decorators-module">geonode.decorators module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-loaders-module">geonode.loaders module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-notifications-backend-module">geonode.notifications_backend module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.notifications_helper">geonode.notifications_helper module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.serializer">geonode.serializer module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-settings-module">geonode.settings module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.singleton">geonode.singleton module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-sitemap-module">geonode.sitemap module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-urls-module">geonode.urls module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-utils-module">geonode.utils module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.version">geonode.version module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#geonode-views-module">geonode.views module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode.wsgi">geonode.wsgi module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.html#module-geonode">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="manage.html">manage module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pavement.html">pavement module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup.html">setup module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tasks.html">tasks module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">GeoNode Cloud Core</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">geonode-cloud-core</a></li>
+          <li class="breadcrumb-item"><a href="geonode.html">geonode package</a></li>
+      <li class="breadcrumb-item active">geonode.storage package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/geonode.storage.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="geonode-storage-package">
+<h1>geonode.storage package<a class="headerlink" href="#geonode-storage-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-geonode.storage.apps">
+<span id="geonode-storage-apps-module"></span><h2>geonode.storage.apps module<a class="headerlink" href="#module-geonode.storage.apps" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="geonode.storage.apps.GeoNodeStorageConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geonode.storage.apps.</span></span><span class="sig-name descname"><span class="pre">GeoNodeStorageConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_module</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/apps.html#GeoNodeStorageConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.apps.GeoNodeStorageConfig" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">AppConfig</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.storage.apps.GeoNodeStorageConfig.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'geonode.storage'</span></em><a class="headerlink" href="#geonode.storage.apps.GeoNodeStorageConfig.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.storage.apps.GeoNodeStorageConfig.verbose_name">
+<span class="sig-name descname"><span class="pre">verbose_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'GeoNode</span> <span class="pre">Storage</span> <span class="pre">Service</span> <span class="pre">and</span> <span class="pre">Manager'</span></em><a class="headerlink" href="#geonode.storage.apps.GeoNodeStorageConfig.verbose_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-geonode.storage.aws">
+<span id="geonode-storage-aws-module"></span><h2>geonode.storage.aws module<a class="headerlink" href="#module-geonode.storage.aws" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="geonode.storage.aws.AwsStorageManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geonode.storage.aws.</span></span><span class="sig-name descname"><span class="pre">AwsStorageManager</span></span><a class="reference internal" href="_modules/geonode/storage/aws.html#AwsStorageManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.aws.AwsStorageManager" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#geonode.storage.manager.StorageManagerInterface" title="geonode.storage.manager.StorageManagerInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageManagerInterface</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.aws.AwsStorageManager.delete">
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/aws.html#AwsStorageManager.delete"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.aws.AwsStorageManager.delete" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.aws.AwsStorageManager.exists">
+<span class="sig-name descname"><span class="pre">exists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/aws.html#AwsStorageManager.exists"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.aws.AwsStorageManager.exists" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.aws.AwsStorageManager.generate_filename">
+<span class="sig-name descname"><span class="pre">generate_filename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/aws.html#AwsStorageManager.generate_filename"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.aws.AwsStorageManager.generate_filename" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.aws.AwsStorageManager.listdir">
+<span class="sig-name descname"><span class="pre">listdir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/aws.html#AwsStorageManager.listdir"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.aws.AwsStorageManager.listdir" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.aws.AwsStorageManager.open">
+<span class="sig-name descname"><span class="pre">open</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'rb'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/aws.html#AwsStorageManager.open"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.aws.AwsStorageManager.open" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.aws.AwsStorageManager.path">
+<span class="sig-name descname"><span class="pre">path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/aws.html#AwsStorageManager.path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.aws.AwsStorageManager.path" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.aws.AwsStorageManager.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/aws.html#AwsStorageManager.save"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.aws.AwsStorageManager.save" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.aws.AwsStorageManager.size">
+<span class="sig-name descname"><span class="pre">size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/aws.html#AwsStorageManager.size"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.aws.AwsStorageManager.size" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.aws.AwsStorageManager.url">
+<span class="sig-name descname"><span class="pre">url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/aws.html#AwsStorageManager.url"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.aws.AwsStorageManager.url" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-geonode.storage.data_retriever">
+<span id="geonode-storage-data-retriever-module"></span><h2>geonode.storage.data_retriever module<a class="headerlink" href="#module-geonode.storage.data_retriever" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="geonode.storage.data_retriever.DataItemRetriever">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geonode.storage.data_retriever.</span></span><span class="sig-name descname"><span class="pre">DataItemRetriever</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/data_retriever.html#DataItemRetriever"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.data_retriever.DataItemRetriever" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.data_retriever.DataItemRetriever.delete_temporary_file">
+<span class="sig-name descname"><span class="pre">delete_temporary_file</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/data_retriever.html#DataItemRetriever.delete_temporary_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.data_retriever.DataItemRetriever.delete_temporary_file" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.data_retriever.DataItemRetriever.get_path">
+<span class="sig-name descname"><span class="pre">get_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">allow_transfer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/data_retriever.html#DataItemRetriever.get_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.data_retriever.DataItemRetriever.get_path" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="geonode.storage.data_retriever.DataItemRetriever.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#geonode.storage.data_retriever.DataItemRetriever.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="geonode.storage.data_retriever.DataItemRetriever.size">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#geonode.storage.data_retriever.DataItemRetriever.size" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.data_retriever.DataItemRetriever.transfer_remote_file">
+<span class="sig-name descname"><span class="pre">transfer_remote_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">temporary_folder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/data_retriever.html#DataItemRetriever.transfer_remote_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.data_retriever.DataItemRetriever.transfer_remote_file" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="geonode.storage.data_retriever.DataRetriever">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geonode.storage.data_retriever.</span></span><span class="sig-name descname"><span class="pre">DataRetriever</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">files</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tranfer_at_creation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/data_retriever.html#DataRetriever"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.data_retriever.DataRetriever" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.data_retriever.DataRetriever.delete_files">
+<span class="sig-name descname"><span class="pre">delete_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/data_retriever.html#DataRetriever.delete_files"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.data_retriever.DataRetriever.delete_files" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.data_retriever.DataRetriever.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/data_retriever.html#DataRetriever.get"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.data_retriever.DataRetriever.get" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.data_retriever.DataRetriever.get_paths">
+<span class="sig-name descname"><span class="pre">get_paths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">allow_transfer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/data_retriever.html#DataRetriever.get_paths"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.data_retriever.DataRetriever.get_paths" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.data_retriever.DataRetriever.items">
+<span class="sig-name descname"><span class="pre">items</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/data_retriever.html#DataRetriever.items"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.data_retriever.DataRetriever.items" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.data_retriever.DataRetriever.transfer_remote_files">
+<span class="sig-name descname"><span class="pre">transfer_remote_files</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/data_retriever.html#DataRetriever.transfer_remote_files"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.data_retriever.DataRetriever.transfer_remote_files" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-geonode.storage.dropbox">
+<span id="geonode-storage-dropbox-module"></span><h2>geonode.storage.dropbox module<a class="headerlink" href="#module-geonode.storage.dropbox" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="geonode.storage.dropbox.DropboxStorageManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geonode.storage.dropbox.</span></span><span class="sig-name descname"><span class="pre">DropboxStorageManager</span></span><a class="reference internal" href="_modules/geonode/storage/dropbox.html#DropboxStorageManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.dropbox.DropboxStorageManager" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#geonode.storage.manager.StorageManagerInterface" title="geonode.storage.manager.StorageManagerInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageManagerInterface</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.dropbox.DropboxStorageManager.delete">
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/dropbox.html#DropboxStorageManager.delete"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.dropbox.DropboxStorageManager.delete" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.dropbox.DropboxStorageManager.exists">
+<span class="sig-name descname"><span class="pre">exists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/dropbox.html#DropboxStorageManager.exists"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.dropbox.DropboxStorageManager.exists" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.dropbox.DropboxStorageManager.generate_filename">
+<span class="sig-name descname"><span class="pre">generate_filename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/dropbox.html#DropboxStorageManager.generate_filename"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.dropbox.DropboxStorageManager.generate_filename" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.dropbox.DropboxStorageManager.listdir">
+<span class="sig-name descname"><span class="pre">listdir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/dropbox.html#DropboxStorageManager.listdir"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.dropbox.DropboxStorageManager.listdir" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.dropbox.DropboxStorageManager.open">
+<span class="sig-name descname"><span class="pre">open</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'rb'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/dropbox.html#DropboxStorageManager.open"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.dropbox.DropboxStorageManager.open" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.dropbox.DropboxStorageManager.path">
+<span class="sig-name descname"><span class="pre">path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/dropbox.html#DropboxStorageManager.path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.dropbox.DropboxStorageManager.path" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.dropbox.DropboxStorageManager.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/dropbox.html#DropboxStorageManager.save"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.dropbox.DropboxStorageManager.save" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.dropbox.DropboxStorageManager.size">
+<span class="sig-name descname"><span class="pre">size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/dropbox.html#DropboxStorageManager.size"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.dropbox.DropboxStorageManager.size" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.dropbox.DropboxStorageManager.url">
+<span class="sig-name descname"><span class="pre">url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/dropbox.html#DropboxStorageManager.url"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.dropbox.DropboxStorageManager.url" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-geonode.storage.exceptions">
+<span id="geonode-storage-exceptions-module"></span><h2>geonode.storage.exceptions module<a class="headerlink" href="#module-geonode.storage.exceptions" title="Link to this heading"></a></h2>
+<dl class="py exception">
+<dt class="sig sig-object py" id="geonode.storage.exceptions.DataRetrieverExcepion">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geonode.storage.exceptions.</span></span><span class="sig-name descname"><span class="pre">DataRetrieverExcepion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">detail</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">code</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/exceptions.html#DataRetrieverExcepion"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.exceptions.DataRetrieverExcepion" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">APIException</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.storage.exceptions.DataRetrieverExcepion.category">
+<span class="sig-name descname"><span class="pre">category</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'data_retriever_exception'</span></em><a class="headerlink" href="#geonode.storage.exceptions.DataRetrieverExcepion.category" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.storage.exceptions.DataRetrieverExcepion.default_code">
+<span class="sig-name descname"><span class="pre">default_code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'data_retriever_exception'</span></em><a class="headerlink" href="#geonode.storage.exceptions.DataRetrieverExcepion.default_code" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.storage.exceptions.DataRetrieverExcepion.default_detail">
+<span class="sig-name descname"><span class="pre">default_detail</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Error</span> <span class="pre">during</span> <span class="pre">the</span> <span class="pre">data</span> <span class="pre">retrieveing'</span></em><a class="headerlink" href="#geonode.storage.exceptions.DataRetrieverExcepion.default_detail" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.storage.exceptions.DataRetrieverExcepion.status_code">
+<span class="sig-name descname"><span class="pre">status_code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">500</span></em><a class="headerlink" href="#geonode.storage.exceptions.DataRetrieverExcepion.status_code" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-geonode.storage.gcs">
+<span id="geonode-storage-gcs-module"></span><h2>geonode.storage.gcs module<a class="headerlink" href="#module-geonode.storage.gcs" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="geonode.storage.gcs.GoogleStorageManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geonode.storage.gcs.</span></span><span class="sig-name descname"><span class="pre">GoogleStorageManager</span></span><a class="reference internal" href="_modules/geonode/storage/gcs.html#GoogleStorageManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.gcs.GoogleStorageManager" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#geonode.storage.manager.StorageManagerInterface" title="geonode.storage.manager.StorageManagerInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageManagerInterface</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.gcs.GoogleStorageManager.delete">
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/gcs.html#GoogleStorageManager.delete"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.gcs.GoogleStorageManager.delete" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.gcs.GoogleStorageManager.exists">
+<span class="sig-name descname"><span class="pre">exists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/gcs.html#GoogleStorageManager.exists"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.gcs.GoogleStorageManager.exists" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.gcs.GoogleStorageManager.generate_filename">
+<span class="sig-name descname"><span class="pre">generate_filename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/gcs.html#GoogleStorageManager.generate_filename"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.gcs.GoogleStorageManager.generate_filename" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.gcs.GoogleStorageManager.listdir">
+<span class="sig-name descname"><span class="pre">listdir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/gcs.html#GoogleStorageManager.listdir"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.gcs.GoogleStorageManager.listdir" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.gcs.GoogleStorageManager.open">
+<span class="sig-name descname"><span class="pre">open</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'rb'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/gcs.html#GoogleStorageManager.open"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.gcs.GoogleStorageManager.open" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.gcs.GoogleStorageManager.path">
+<span class="sig-name descname"><span class="pre">path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/gcs.html#GoogleStorageManager.path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.gcs.GoogleStorageManager.path" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.gcs.GoogleStorageManager.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/gcs.html#GoogleStorageManager.save"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.gcs.GoogleStorageManager.save" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.gcs.GoogleStorageManager.size">
+<span class="sig-name descname"><span class="pre">size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/gcs.html#GoogleStorageManager.size"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.gcs.GoogleStorageManager.size" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.gcs.GoogleStorageManager.url">
+<span class="sig-name descname"><span class="pre">url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/gcs.html#GoogleStorageManager.url"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.gcs.GoogleStorageManager.url" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-geonode.storage.manager">
+<span id="geonode-storage-manager-module"></span><h2>geonode.storage.manager module<a class="headerlink" href="#module-geonode.storage.manager" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="geonode.storage.manager.DefaultStorageManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geonode.storage.manager.</span></span><span class="sig-name descname"><span class="pre">DefaultStorageManager</span></span><a class="reference internal" href="_modules/geonode/storage/manager.html#DefaultStorageManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.DefaultStorageManager" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#geonode.storage.manager.StorageManagerInterface" title="geonode.storage.manager.StorageManagerInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageManagerInterface</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.DefaultStorageManager.delete">
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#DefaultStorageManager.delete"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.DefaultStorageManager.delete" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.DefaultStorageManager.exists">
+<span class="sig-name descname"><span class="pre">exists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#DefaultStorageManager.exists"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.DefaultStorageManager.exists" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.DefaultStorageManager.generate_filename">
+<span class="sig-name descname"><span class="pre">generate_filename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#DefaultStorageManager.generate_filename"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.DefaultStorageManager.generate_filename" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.DefaultStorageManager.listdir">
+<span class="sig-name descname"><span class="pre">listdir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#DefaultStorageManager.listdir"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.DefaultStorageManager.listdir" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.DefaultStorageManager.open">
+<span class="sig-name descname"><span class="pre">open</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'rb'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#DefaultStorageManager.open"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.DefaultStorageManager.open" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.DefaultStorageManager.path">
+<span class="sig-name descname"><span class="pre">path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#DefaultStorageManager.path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.DefaultStorageManager.path" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.DefaultStorageManager.rmtree">
+<span class="sig-name descname"><span class="pre">rmtree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_errors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#DefaultStorageManager.rmtree"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.DefaultStorageManager.rmtree" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.DefaultStorageManager.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#DefaultStorageManager.save"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.DefaultStorageManager.save" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.DefaultStorageManager.size">
+<span class="sig-name descname"><span class="pre">size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#DefaultStorageManager.size"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.DefaultStorageManager.size" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.DefaultStorageManager.url">
+<span class="sig-name descname"><span class="pre">url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#DefaultStorageManager.url"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.DefaultStorageManager.url" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="geonode.storage.manager.StorageManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geonode.storage.manager.</span></span><span class="sig-name descname"><span class="pre">StorageManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">remote_files</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#geonode.storage.manager.StorageManagerInterface" title="geonode.storage.manager.StorageManagerInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageManagerInterface</span></code></a></p>
+<p>Manage the files with different filestorages configured by default is the Filesystem one.
+If the file is not in the FileSystem, we try to transfer it on the local filesystem and then
+treat as a file_system file</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.StorageManager.clone_remote_files">
+<span class="sig-name descname"><span class="pre">clone_remote_files</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.clone_remote_files"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.clone_remote_files" title="Link to this definition"></a></dt>
+<dd><p>Using the data retriever object clone the remote path into a local temporary storage</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.StorageManager.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resource</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.copy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.copy" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.StorageManager.copy_files_list">
+<span class="sig-name descname"><span class="pre">copy_files_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">files</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.copy_files_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.copy_files_list" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.StorageManager.copy_single_file">
+<span class="sig-name descname"><span class="pre">copy_single_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">old_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.copy_single_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.copy_single_file" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.StorageManager.deconstruct">
+<span class="sig-name descname"><span class="pre">deconstruct</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geonode.storage.manager.StorageManager.deconstruct" title="Link to this definition"></a></dt>
+<dd><p>Return a 3-tuple of class import path, positional arguments,
+and keyword arguments.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.StorageManager.delete">
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.delete"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.delete" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.StorageManager.delete_retrieved_paths">
+<span class="sig-name descname"><span class="pre">delete_retrieved_paths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.delete_retrieved_paths"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.delete_retrieved_paths" title="Link to this definition"></a></dt>
+<dd><p>Delete cloned object from the temporary folder.
+By default if the folder is under the MEDIA_ROOT the file is not deleted.
+In case should be deleted, the force=True is required</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.StorageManager.exists">
+<span class="sig-name descname"><span class="pre">exists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.exists"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.exists" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.StorageManager.generate_filename">
+<span class="sig-name descname"><span class="pre">generate_filename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.generate_filename"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.generate_filename" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.StorageManager.get_retrieved_paths">
+<span class="sig-name descname"><span class="pre">get_retrieved_paths</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.get_retrieved_paths"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.get_retrieved_paths" title="Link to this definition"></a></dt>
+<dd><p>Return the path of the local objects in the temporary folder.
+We convert them as string instead of PosixPath</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.StorageManager.listdir">
+<span class="sig-name descname"><span class="pre">listdir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.listdir"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.listdir" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.StorageManager.open">
+<span class="sig-name descname"><span class="pre">open</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'rb'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.open"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.open" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.StorageManager.path">
+<span class="sig-name descname"><span class="pre">path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.path" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.StorageManager.replace">
+<span class="sig-name descname"><span class="pre">replace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resource</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.replace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.replace" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.StorageManager.replace_files_list">
+<span class="sig-name descname"><span class="pre">replace_files_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">old_files</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_files</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.replace_files_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.replace_files_list" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.StorageManager.replace_single_file">
+<span class="sig-name descname"><span class="pre">replace_single_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">old_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.replace_single_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.replace_single_file" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.StorageManager.rmtree">
+<span class="sig-name descname"><span class="pre">rmtree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_errors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.rmtree"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.rmtree" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.StorageManager.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.save"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.save" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.StorageManager.size">
+<span class="sig-name descname"><span class="pre">size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.size"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.size" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.StorageManager.url">
+<span class="sig-name descname"><span class="pre">url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.url"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.url" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="geonode.storage.manager.StorageManagerInterface">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geonode.storage.manager.</span></span><span class="sig-name descname"><span class="pre">StorageManagerInterface</span></span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManagerInterface"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManagerInterface" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.StorageManagerInterface.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resource</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManagerInterface.copy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManagerInterface.copy" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.StorageManagerInterface.delete">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManagerInterface.delete"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManagerInterface.delete" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.StorageManagerInterface.exists">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">exists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManagerInterface.exists"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManagerInterface.exists" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.StorageManagerInterface.generate_filename">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">generate_filename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManagerInterface.generate_filename"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManagerInterface.generate_filename" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.StorageManagerInterface.listdir">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">listdir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManagerInterface.listdir"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManagerInterface.listdir" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.StorageManagerInterface.open">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">open</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'rb'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManagerInterface.open"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManagerInterface.open" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.StorageManagerInterface.path">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManagerInterface.path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManagerInterface.path" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.StorageManagerInterface.replace">
+<span class="sig-name descname"><span class="pre">replace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resource</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManagerInterface.replace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManagerInterface.replace" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.StorageManagerInterface.rmtree">
+<span class="sig-name descname"><span class="pre">rmtree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_errors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManagerInterface.rmtree"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManagerInterface.rmtree" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.StorageManagerInterface.save">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManagerInterface.save"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManagerInterface.save" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.StorageManagerInterface.size">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManagerInterface.size"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManagerInterface.size" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.storage.manager.StorageManagerInterface.url">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManagerInterface.url"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManagerInterface.url" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-geonode.storage.settings">
+<span id="geonode-storage-settings-module"></span><h2>geonode.storage.settings module<a class="headerlink" href="#module-geonode.storage.settings" title="Link to this heading"></a></h2>
+</section>
+<section id="geonode-storage-tests-module">
+<h2>geonode.storage.tests module<a class="headerlink" href="#geonode-storage-tests-module" title="Link to this heading"></a></h2>
+</section>
+<section id="module-geonode.storage">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-geonode.storage" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="geonode.social.templatetags.html" class="btn btn-neutral float-left" title="geonode.social.templatetags package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="geonode.tasks.html" class="btn btn-neutral float-right" title="geonode.tasks package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Kan Territory &amp; IT.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
