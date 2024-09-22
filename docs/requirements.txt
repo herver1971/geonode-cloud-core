@@ -5,6 +5,7 @@ sphinxcontrib-openapi
 sphinxcontrib-napoleon
 sphinx-autobuild
 GDAL==3.4.1
+GeoNode>=4.0
 
 # native dependencies
 Pillow==10.0.1
