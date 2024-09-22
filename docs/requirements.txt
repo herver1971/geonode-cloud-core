@@ -59,6 +59,7 @@ django-sequences==2.8
 oauthlib==3.2.2
 pyopenssl==23.2.0
 pyjwt==2.8.0
+django-oauth-toolkit
 
 # geopython dependencies
 pyproj<3.7.0
