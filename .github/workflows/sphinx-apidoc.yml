@@ -65,9 +65,9 @@ jobs:
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git pull --rebase origin main  # Traer los cambios remotos
         git add -f docs/_build/html docs/*.rst
-        git commit -m "Auto-update documentation"
+        git commit -m "Auto-update documentation" || echo "No changes to commit"  # Commit si hay cambios
+        git pull --rebase origin main  # Traer los cambios remotos
         git push origin HEAD:main  # Forzar el push a la rama main
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
