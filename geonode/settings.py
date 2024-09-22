@@ -412,6 +412,8 @@ GEONODE_APPS_NAV_MENU_ENABLE = ast.literal_eval(os.getenv("GEONODE_APPS_NAV_MENU
 
 GEONODE_INTERNAL_APPS = (
     # GeoNode internal apps
+    "geonode.api",
+    "geonode.harvesting",
     "geonode.people",
     "geonode.client",
     "geonode.themes",
@@ -447,7 +449,6 @@ INSTALLED_APPS = (
     # 'django_admin_bootstrapped.bootstrap3',
     # 'django_admin_bootstrapped',
     # Apps bundled with Django
-    "geonode.harvesting",
     "modeltranslation",
     "dal",
     "dal_select2",
