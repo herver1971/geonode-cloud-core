@@ -1,7 +1,5 @@
 import json
-
-from urllib.parse import urlparse, urlunparse, urlsplit, parse_qsl
-from urllib.parse import urlencode as urllib_urlencode, SplitResult
+from urllib.parse import urlparse, urlunparse
 
 from oauthlib import oauth2
 from oauthlib.common import Request as OauthlibRequest
@@ -38,19 +36,8 @@ class OAuthLibCore:
         unsafe = set(c for c in parsed[4]).difference(urlencoded)
         for c in unsafe:
             parsed[4] = parsed[4].replace(c, quote(c, safe=b""))
-        uri = urlsplit(urlunparse(parsed))
-        query = uri.query
-        params = parse_qsl(query)
-        encoded_params = urllib_urlencode(params, doseq=False)
 
-        parsed_url = SplitResult(
-            uri.scheme,
-            uri.netloc,
-            uri.path,
-            encoded_params,
-            uri.fragment)
-
-        return parsed_url.geturl()
+        return urlunparse(parsed)
 
     def _get_extra_credentials(self, request):
         """
@@ -165,12 +152,14 @@ class OAuthLibCore:
         uri, http_method, body, headers = self._extract_params(request)
         extra_credentials = self._get_extra_credentials(request)
 
-        headers, body, status = self.server.create_token_response(
-            uri, http_method, body, headers, extra_credentials
-        )
-        uri = headers.get("Location", None)
-
-        return uri, headers, body, status
+        try:
+            headers, body, status = self.server.create_token_response(
+                uri, http_method, body, headers, extra_credentials
+            )
+            uri = headers.get("Location", None)
+            return uri, headers, body, status
+        except OAuth2Error as exc:
+            return None, exc.headers, exc.json, exc.status_code
 
     def create_revocation_response(self, request):
         """

@@ -1,10 +1,12 @@
 import logging
+import time
 import uuid
 from datetime import timedelta
 from urllib.parse import parse_qsl, urlparse
 
 from django.apps import apps
 from django.conf import settings
+from django.contrib.auth.hashers import identify_hasher, make_password
 from django.core.exceptions import ImproperlyConfigured
 from django.db import models, transaction
 from django.urls import reverse
@@ -12,6 +14,7 @@ from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 from jwcrypto import jwk
 from jwcrypto.common import base64url_encode
+from oauthlib.oauth2.rfc6749 import errors
 
 from .generators import generate_client_id, generate_client_secret
 from .scopes import get_scopes_backend
@@ -20,6 +23,20 @@ from .validators import RedirectURIValidator, WildcardSet
 
 
 logger = logging.getLogger(__name__)
+
+
+class ClientSecretField(models.CharField):
+    def pre_save(self, model_instance, add):
+        secret = getattr(model_instance, self.attname)
+        try:
+            hasher = identify_hasher(secret)
+            logger.debug(f"{model_instance}: {self.attname} is already hashed with {hasher}.")
+        except ValueError:
+            logger.debug(f"{model_instance}: {self.attname} is not hashed; hashing it now.")
+            hashed_secret = make_password(secret)
+            setattr(model_instance, self.attname, hashed_secret)
+            return hashed_secret
+        return super().pre_save(model_instance, add)
 
 
 class AbstractApplication(models.Model):
@@ -35,6 +52,9 @@ class AbstractApplication(models.Model):
     * :attr:`user` ref to a Django user
     * :attr:`redirect_uris` The list of allowed redirect uri. The string
                             consists of valid URLs separated by space
+    * :attr:`post_logout_redirect_uris` The list of allowed redirect uris after
+                                        an RP initiated logout. The string
+                                        consists of valid URLs separated by space
     * :attr:`client_type` Client type as described in :rfc:`2.1`
     * :attr:`authorization_grant_type` Authorization flows available to the
                                        Application
@@ -86,10 +106,18 @@ class AbstractApplication(models.Model):
         blank=True,
         help_text=_("Allowed URIs list, space separated"),
     )
+    post_logout_redirect_uris = models.TextField(
+        blank=True,
+        help_text=_("Allowed Post Logout URIs list, space separated"),
+    )
     client_type = models.CharField(max_length=32, choices=CLIENT_TYPES)
     authorization_grant_type = models.CharField(max_length=32, choices=GRANT_TYPES)
-    client_secret = models.CharField(
-        max_length=255, blank=True, default=generate_client_secret, db_index=True
+    client_secret = ClientSecretField(
+        max_length=255,
+        blank=True,
+        default=generate_client_secret,
+        db_index=True,
+        help_text=_("Hashed on Save. Copy it now if this is a new secret."),
     )
     name = models.CharField(max_length=255, blank=True)
     skip_authorization = models.BooleanField(default=False)
@@ -107,14 +135,16 @@ class AbstractApplication(models.Model):
     @property
     def default_redirect_uri(self):
         """
-        Returns the default redirect_uri extracting the first item from
-        the :attr:`redirect_uris` string
+        Returns the default redirect_uri, *if* only one is registered.
         """
         if self.redirect_uris:
-            return self.redirect_uris.split().pop(0)
+            uris = self.redirect_uris.split()
+            if len(uris) == 1:
+                return self.redirect_uris.split().pop(0)
+            raise errors.MissingRedirectURIError()
 
         assert False, (
-            "If you are using implicit, authorization_code"
+            "If you are using implicit, authorization_code "
             "or all-in-one grant_type, you must define "
             "redirect_uris field in your Application model"
         )
@@ -126,6 +156,14 @@ class AbstractApplication(models.Model):
         :param uri: Url to check
         """
         return redirect_to_uri_allowed(uri, self.redirect_uris.split())
+
+    def post_logout_redirect_uri_allowed(self, uri):
+        """
+        Checks if given URI is one of the items in :attr:`post_logout_redirect_uris` string
+
+        :param uri: URI to check
+        """
+        return redirect_to_uri_allowed(uri, self.post_logout_redirect_uris.split())
 
     def clean(self):
         from django.core.exceptions import ValidationError
@@ -563,67 +601,87 @@ class IDToken(AbstractIDToken):
 
 
 def get_application_model():
-    """ Return the Application model that is active in this project. """
+    """Return the Application model that is active in this project."""
     return apps.get_model(oauth2_settings.APPLICATION_MODEL)
 
 
 def get_grant_model():
-    """ Return the Grant model that is active in this project. """
+    """Return the Grant model that is active in this project."""
     return apps.get_model(oauth2_settings.GRANT_MODEL)
 
 
 def get_access_token_model():
-    """ Return the AccessToken model that is active in this project. """
+    """Return the AccessToken model that is active in this project."""
     return apps.get_model(oauth2_settings.ACCESS_TOKEN_MODEL)
 
 
 def get_id_token_model():
-    """ Return the AccessToken model that is active in this project. """
+    """Return the AccessToken model that is active in this project."""
     return apps.get_model(oauth2_settings.ID_TOKEN_MODEL)
 
 
 def get_refresh_token_model():
-    """ Return the RefreshToken model that is active in this project. """
+    """Return the RefreshToken model that is active in this project."""
     return apps.get_model(oauth2_settings.REFRESH_TOKEN_MODEL)
 
 
 def get_application_admin_class():
-    """ Return the Application admin class that is active in this project. """
+    """Return the Application admin class that is active in this project."""
     application_admin_class = oauth2_settings.APPLICATION_ADMIN_CLASS
     return application_admin_class
 
 
 def get_access_token_admin_class():
-    """ Return the AccessToken admin class that is active in this project. """
+    """Return the AccessToken admin class that is active in this project."""
     access_token_admin_class = oauth2_settings.ACCESS_TOKEN_ADMIN_CLASS
     return access_token_admin_class
 
 
 def get_grant_admin_class():
-    """ Return the Grant admin class that is active in this project. """
+    """Return the Grant admin class that is active in this project."""
     grant_admin_class = oauth2_settings.GRANT_ADMIN_CLASS
     return grant_admin_class
 
 
 def get_id_token_admin_class():
-    """ Return the IDToken admin class that is active in this project. """
+    """Return the IDToken admin class that is active in this project."""
     id_token_admin_class = oauth2_settings.ID_TOKEN_ADMIN_CLASS
     return id_token_admin_class
 
 
 def get_refresh_token_admin_class():
-    """ Return the RefreshToken admin class that is active in this project. """
+    """Return the RefreshToken admin class that is active in this project."""
     refresh_token_admin_class = oauth2_settings.REFRESH_TOKEN_ADMIN_CLASS
     return refresh_token_admin_class
 
 
 def clear_expired():
+    def batch_delete(queryset, query):
+        CLEAR_EXPIRED_TOKENS_BATCH_SIZE = oauth2_settings.CLEAR_EXPIRED_TOKENS_BATCH_SIZE
+        CLEAR_EXPIRED_TOKENS_BATCH_INTERVAL = oauth2_settings.CLEAR_EXPIRED_TOKENS_BATCH_INTERVAL
+        current_no = start_no = queryset.count()
+
+        while current_no:
+            flat_queryset = queryset.values_list("id", flat=True)[:CLEAR_EXPIRED_TOKENS_BATCH_SIZE]
+            batch_length = flat_queryset.count()
+            queryset.model.objects.filter(id__in=list(flat_queryset)).delete()
+            logger.debug(f"{batch_length} tokens deleted, {current_no-batch_length} left")
+            queryset = queryset.model.objects.filter(query)
+            time.sleep(CLEAR_EXPIRED_TOKENS_BATCH_INTERVAL)
+            current_no = queryset.count()
+
+        stop_no = queryset.model.objects.filter(query).count()
+        deleted = start_no - stop_no
+        return deleted
+
     now = timezone.now()
     refresh_expire_at = None
     access_token_model = get_access_token_model()
     refresh_token_model = get_refresh_token_model()
+    id_token_model = get_id_token_model()
     grant_model = get_grant_model()
     REFRESH_TOKEN_EXPIRE_SECONDS = oauth2_settings.REFRESH_TOKEN_EXPIRE_SECONDS
+
     if REFRESH_TOKEN_EXPIRE_SECONDS:
         if not isinstance(REFRESH_TOKEN_EXPIRE_SECONDS, timedelta):
             try:
@@ -633,31 +691,38 @@ def clear_expired():
                 raise ImproperlyConfigured(e)
         refresh_expire_at = now - REFRESH_TOKEN_EXPIRE_SECONDS
 
-    with transaction.atomic():
-        if refresh_expire_at:
-            revoked = refresh_token_model.objects.filter(
-                revoked__lt=refresh_expire_at,
-            )
-            expired = refresh_token_model.objects.filter(
-                access_token__expires__lt=refresh_expire_at,
-            )
+    if refresh_expire_at:
+        revoked_query = models.Q(revoked__lt=refresh_expire_at)
+        revoked = refresh_token_model.objects.filter(revoked_query)
 
-            logger.info("%s Revoked refresh tokens to be deleted", revoked.count())
-            logger.info("%s Expired refresh tokens to be deleted", expired.count())
+        revoked_deleted_no = batch_delete(revoked, revoked_query)
+        logger.info("%s Revoked refresh tokens deleted", revoked_deleted_no)
 
-            revoked.delete()
-            expired.delete()
-        else:
-            logger.info("refresh_expire_at is %s. No refresh tokens deleted.", refresh_expire_at)
+        expired_query = models.Q(access_token__expires__lt=refresh_expire_at)
+        expired = refresh_token_model.objects.filter(expired_query)
 
-        access_tokens = access_token_model.objects.filter(refresh_token__isnull=True, expires__lt=now)
-        grants = grant_model.objects.filter(expires__lt=now)
+        expired_deleted_no = batch_delete(expired, expired_query)
+        logger.info("%s Expired refresh tokens deleted", expired_deleted_no)
+    else:
+        logger.info("refresh_expire_at is %s. No refresh tokens deleted.", refresh_expire_at)
 
-        logger.info("%s Expired access tokens to be deleted", access_tokens.count())
-        logger.info("%s Expired grant tokens to be deleted", grants.count())
+    access_token_query = models.Q(refresh_token__isnull=True, expires__lt=now)
+    access_tokens = access_token_model.objects.filter(access_token_query)
 
-        access_tokens.delete()
-        grants.delete()
+    access_tokens_delete_no = batch_delete(access_tokens, access_token_query)
+    logger.info("%s Expired access tokens deleted", access_tokens_delete_no)
+
+    id_token_query = models.Q(access_token__isnull=True, expires__lt=now)
+    id_tokens = id_token_model.objects.filter(id_token_query)
+
+    id_tokens_delete_no = batch_delete(id_tokens, id_token_query)
+    logger.info("%s Expired ID tokens deleted", id_tokens_delete_no)
+
+    grants_query = models.Q(expires__lt=now)
+    grants = grant_model.objects.filter(grants_query)
+
+    grants_deleted_no = batch_delete(grants, grants_query)
+    logger.info("%s Expired grant tokens deleted", grants_deleted_no)
 
 
 def redirect_to_uri_allowed(uri, allowed_uris):
@@ -699,7 +764,6 @@ def redirect_to_uri_allowed(uri, allowed_uris):
             and parsed_allowed_uri.netloc == parsed_uri.netloc
             and parsed_allowed_uri.path == parsed_uri.path
         ):
-
             aqs_set = set(parse_qsl(parsed_allowed_uri.query))
             if aqs_set.issubset(uqs_set):
                 return True

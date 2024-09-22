@@ -1,7 +1,7 @@
 import logging
 
 from django.conf import settings
-from django.core.exceptions import ImproperlyConfigured
+from django.core.exceptions import ImproperlyConfigured, SuspiciousOperation
 from django.http import HttpResponseForbidden, HttpResponseNotFound
 
 from ..exceptions import FatalClientError
@@ -150,7 +150,14 @@ class OAuthLibMixin:
         :param request: The current django.http.HttpRequest object
         """
         core = self.get_oauthlib_core()
-        return core.verify_request(request, scopes=self.get_scopes())
+
+        try:
+            return core.verify_request(request, scopes=self.get_scopes())
+        except ValueError as error:
+            if str(error) == "Invalid hex encoding in query string.":
+                raise SuspiciousOperation(error)
+            else:
+                raise
 
     def get_scopes(self):
         """
@@ -314,6 +321,30 @@ class OIDCOnlyMixin:
 
     def dispatch(self, *args, **kwargs):
         if not oauth2_settings.OIDC_ENABLED:
+            if settings.DEBUG:
+                raise ImproperlyConfigured(self.debug_error_message)
+            log.warning(self.debug_error_message)
+            return HttpResponseNotFound()
+        return super().dispatch(*args, **kwargs)
+
+
+class OIDCLogoutOnlyMixin(OIDCOnlyMixin):
+    """
+    Mixin for views that should only be accessible when OIDC and OIDC RP-Initiated Logout are enabled.
+
+    If either is not enabled:
+
+    * if DEBUG is True, raises an ImproperlyConfigured exception explaining why
+    * otherwise, returns a 404 response, logging the same warning
+    """
+
+    debug_error_message = (
+        "The django-oauth-toolkit OIDC RP-Initiated Logout view is not enabled unless you "
+        "have configured OIDC_RP_INITIATED_LOGOUT_ENABLED in the settings"
+    )
+
+    def dispatch(self, *args, **kwargs):
+        if not oauth2_settings.OIDC_RP_INITIATED_LOGOUT_ENABLED:
             if settings.DEBUG:
                 raise ImproperlyConfigured(self.debug_error_message)
             log.warning(self.debug_error_message)
