@@ -412,8 +412,6 @@ GEONODE_APPS_NAV_MENU_ENABLE = ast.literal_eval(os.getenv("GEONODE_APPS_NAV_MENU
 
 GEONODE_INTERNAL_APPS = (
     # GeoNode internal apps
-    "geonode.api",
-    "geonode.harvesting",
     "geonode.people",
     "geonode.client",
     "geonode.themes",
