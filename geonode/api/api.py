@@ -70,7 +70,9 @@ FILTER_TYPES = {"dataset": Dataset, "map": Map, "document": Document, "geoapp": 
 
 
 class CountJSONSerializer(Serializer):
-    """Custom serializer to post process the api and add counts"""
+    """
+    Custom serializer to post process the api and add counts
+    """
 
     def get_resources_counts(self, options):
         if settings.SKIP_PERMS_FILTER:
@@ -134,9 +136,11 @@ class CountJSONSerializer(Serializer):
 
 
 class TypeFilteredResource(ModelResource):
-    """Common resource used to apply faceting to categories, keywords, and
+    """
+    Common resource used to apply faceting to categories, keywords, and
     regions based on the type passed as query parameter in the form
-    type:dataset/map/document"""
+    type:dataset/map/document
+    """
 
     count = fields.IntegerField()
 
@@ -168,7 +172,9 @@ class TypeFilteredResource(ModelResource):
 
 
 class TagResource(TypeFilteredResource):
-    """Tags api"""
+    """
+    Tags api
+    """
 
     def serialize(self, request, data, format, options=None):
         if options is None:
@@ -426,7 +432,9 @@ class GroupResource(ModelResource):
 
 
 class ProfileResource(TypeFilteredResource):
-    """Profile api"""
+    """
+    Profile api
+    """
 
     avatar_100 = fields.CharField(null=True)
     profile_detail_url = fields.CharField()
@@ -581,7 +589,9 @@ class ProfileResource(TypeFilteredResource):
 
 
 class OwnersResource(TypeFilteredResource):
-    """Owners api, lighter and faster version of the profiles api"""
+    """
+    Owners api, lighter and faster version of the profiles api
+    """
 
     full_name = fields.CharField(null=True)
 
@@ -636,7 +646,9 @@ class OwnersResource(TypeFilteredResource):
 
 
 class GeoserverStyleResource(ModelResource):
-    """Styles API for Geoserver backend."""
+    """
+    Styles API for Geoserver backend.
+    """
 
     body = fields.CharField(attribute="sld_body", use_in="detail")
     name = fields.CharField(attribute="name")
@@ -671,7 +683,8 @@ class GeoserverStyleResource(ModelResource):
         return updated_filters
 
     def populate_object(self, style):
-        """Populate results with necessary fields
+        """
+        Populate results with necessary fields
 
         :param style: Style objects
         :type style: Style
@@ -681,7 +694,9 @@ class GeoserverStyleResource(ModelResource):
         return style
 
     def build_bundle(self, obj=None, data=None, request=None, **kwargs):
-        """Override build_bundle method to add additional info."""
+        """
+        Override build_bundle method to add additional info.
+        """
 
         if obj is None and self._meta.object_class:
             obj = self._meta.object_class()
@@ -701,7 +716,8 @@ if check_ogc_backend(geoserver.BACKEND_PACKAGE):
 
 
 def _get_resource_counts(request, resourcebase_filter_kwargs):
-    """Return a dict with counts of resources of various types
+    """
+    Return a dict with counts of resources of various types
 
     The ``resourcebase_filter_kwargs`` argument should be a dict with a suitable
     queryset filter that can be applied to select only the relevant
