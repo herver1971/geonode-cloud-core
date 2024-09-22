@@ -48,19 +48,25 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r docs/requirements.txt
 
-    # 7. Run sphinx-apidoc
+    # 7. Run database migrations
+    - name: Run database migrations
+      run: |
+        source venv/bin/activate
+        python manage.py migrate
+
+    # 8. Run sphinx-apidoc
     - name: Generate API documentation
       run: |
         source venv/bin/activate
         sphinx-apidoc -o docs ./
 
-    # 8. Build the HTML docs
+    # 9. Build the HTML docs
     - name: Build HTML documentation
       run: |
         source venv/bin/activate
         sphinx-build -b html docs docs/_build/html
 
-    # 9. Commit and push the generated documentation
+    # 10. Commit and push the generated documentation
     - name: Commit and push changes
       run: |
         git config --global user.name 'github-actions[bot]'
