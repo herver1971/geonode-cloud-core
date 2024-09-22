@@ -478,15 +478,20 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="geonode.storage.manager.StorageManager">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geonode.storage.manager.</span></span><span class="sig-name descname"><span class="pre">StorageManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geonode.storage.manager.</span></span><span class="sig-name descname"><span class="pre">StorageManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">remote_files</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#geonode.storage.manager.StorageManagerInterface" title="geonode.storage.manager.StorageManagerInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageManagerInterface</span></code></a></p>
 <p>Manage the files with different filestorages configured by default is the Filesystem one.
 If the file is not in the FileSystem, we try to transfer it on the local filesystem and then
 treat as a file_system file</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="geonode.storage.manager.StorageManager.clone_remote_files">
-<span class="sig-name descname"><span class="pre">clone_remote_files</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Mapping</span></span></span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.clone_remote_files"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.clone_remote_files" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">clone_remote_files</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.clone_remote_files"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.clone_remote_files" title="Link to this definition"></a></dt>
 <dd><p>Using the data retriever object clone the remote path into a local temporary storage</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code></span></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -496,12 +501,12 @@ treat as a file_system file</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="geonode.storage.manager.StorageManager.copy_files_list">
-<span class="sig-name descname"><span class="pre">copy_files_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">files</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.copy_files_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.copy_files_list" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">copy_files_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">files</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.copy_files_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.copy_files_list" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="geonode.storage.manager.StorageManager.copy_single_file">
-<span class="sig-name descname"><span class="pre">copy_single_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">old_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BinaryIO</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.copy_single_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.copy_single_file" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">copy_single_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">old_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.copy_single_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.copy_single_file" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -518,10 +523,15 @@ and keyword arguments.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="geonode.storage.manager.StorageManager.delete_retrieved_paths">
-<span class="sig-name descname"><span class="pre">delete_retrieved_paths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.delete_retrieved_paths"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.delete_retrieved_paths" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">delete_retrieved_paths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.delete_retrieved_paths"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.delete_retrieved_paths" title="Link to this definition"></a></dt>
 <dd><p>Delete cloned object from the temporary folder.
 By default if the folder is under the MEDIA_ROOT the file is not deleted.
 In case should be deleted, the force=True is required</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -536,9 +546,14 @@ In case should be deleted, the force=True is required</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="geonode.storage.manager.StorageManager.get_retrieved_paths">
-<span class="sig-name descname"><span class="pre">get_retrieved_paths</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Mapping</span></span></span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.get_retrieved_paths"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.get_retrieved_paths" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_retrieved_paths</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.get_retrieved_paths"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.get_retrieved_paths" title="Link to this definition"></a></dt>
 <dd><p>Return the path of the local objects in the temporary folder.
 We convert them as string instead of PosixPath</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code></span></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -558,17 +573,17 @@ We convert them as string instead of PosixPath</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="geonode.storage.manager.StorageManager.replace">
-<span class="sig-name descname"><span class="pre">replace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resource</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">BinaryIO</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.replace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.replace" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">replace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resource</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.replace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.replace" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="geonode.storage.manager.StorageManager.replace_files_list">
-<span class="sig-name descname"><span class="pre">replace_files_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">old_files</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_files</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.replace_files_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.replace_files_list" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">replace_files_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">old_files</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_files</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.replace_files_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.replace_files_list" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="geonode.storage.manager.StorageManager.replace_single_file">
-<span class="sig-name descname"><span class="pre">replace_single_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">old_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BinaryIO</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.replace_single_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.replace_single_file" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">replace_single_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">old_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManager.replace_single_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManager.replace_single_file" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -634,7 +649,7 @@ We convert them as string instead of PosixPath</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="geonode.storage.manager.StorageManagerInterface.replace">
-<span class="sig-name descname"><span class="pre">replace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resource</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">BinaryIO</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManagerInterface.replace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManagerInterface.replace" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">replace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resource</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/storage/manager.html#StorageManagerInterface.replace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.storage.manager.StorageManagerInterface.replace" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
