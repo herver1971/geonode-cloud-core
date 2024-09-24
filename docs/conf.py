@@ -12,7 +12,7 @@ from django.conf import settings
 from django.apps import apps
 
 sys.path.insert(0, os.path.abspath('..'))
-os.environ.setdefault['DJANGO_SETTINGS_MODULE'] = 'geonode.settings'
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'geonode.settings')
 
 #os.environ['DJANGO_SETTINGS_MODULE'] = 'geonode.settings'
 
