@@ -12,7 +12,8 @@ from django.conf import settings
 from django.apps import apps
 
 sys.path.insert(0, os.path.abspath('..'))
-os.environ['DJANGO_SETTINGS_MODULE'] = 'geonode.settings'
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", settings.get("django_settings"))
+#os.environ['DJANGO_SETTINGS_MODULE'] = 'geonode.settings'
 
 # Inicializa Django
 django.setup()
