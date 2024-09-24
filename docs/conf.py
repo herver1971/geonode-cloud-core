@@ -10,14 +10,18 @@ import sys
 import django
 from django.conf import settings
 from django.apps import apps
+from dotenv import load_dotenv
 
-#sys.path.insert(0, os.path.abspath('..'))
-#os.environ['DJANGO_SETTINGS_MODULE'] = 'geonode'  # Cambia 'nombre_de_tu_proyecto' por el nombre correcto
-# Inicializa Django
-#django.setup()
+# Cargar las variables del archivo .env
+load_dotenv()
 
+# Agrega el directorio del proyecto al sys.path
 sys.path.insert(0, os.path.abspath('..'))
+
+# Establece el archivo de configuración de Django
 os.environ['DJANGO_SETTINGS_MODULE'] = 'geonode.settings'
+
+# Inicializa Django
 django.setup()
 
 project = 'GeoNode Cloud Core'
@@ -29,25 +33,24 @@ release = '1.0.0'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-	'sphinx.ext.autodoc',
-	'sphinx.ext.napoleon',
-	'sphinx_autodoc_typehints',
-	'sphinx.ext.todo',
-	'sphinx.ext.autosummary',
-	'sphinxcontrib.openapi',
-	'sphinx.ext.coverage',
-	'sphinx.ext.doctest',
-	'sphinx.ext.intersphinx',
-	'sphinx.ext.viewcode'
-	
+    'sphinx.ext.autodoc',
+    'sphinx.ext.napoleon',
+    'sphinx_autodoc_typehints',
+    'sphinx.ext.todo',
+    'sphinx.ext.autosummary',
+    'sphinxcontrib.openapi',
+    'sphinx.ext.coverage',
+    'sphinx.ext.doctest',
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.viewcode'
 ]
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 language = 'en'
-locale_dirs = ['locale/']   # directorio que contiene los archivos de traducción
-gettext_compact = False      # para evitar la compresión de mensajes en un solo archivo
+locale_dirs = ['locale/']  # Directorio que contiene los archivos de traducción
+gettext_compact = False    # Para evitar la compresión de mensajes en un solo archivo
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
