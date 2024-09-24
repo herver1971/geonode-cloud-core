@@ -70,7 +70,7 @@ django-configurations
 django-translations
 django-core
 django-oauth2-provider
-spatialite
+geonode_logstash
 
 # geopython dependencies
 pyproj<3.7.0
