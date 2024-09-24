@@ -20,7 +20,7 @@ jobs:
     # 2. Set environment variables
     - name: Set environment variables
       run: |
-        echo "EXTRA_CONTRIB_APPS='[]'" >> $GITHUB_ENV
+        echo 'EXTRA_CONTRIB_APPS="[]"' >> $GITHUB_ENV
 
     # 3. Set up Python
     - name: Set up Python
@@ -76,3 +76,4 @@ jobs:
         git push origin HEAD:main  # Forzar el push a la rama main
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
