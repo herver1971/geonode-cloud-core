@@ -11,14 +11,10 @@ import django
 from django.conf import settings
 from django.apps import apps
 
-# Agregar la carpeta raíz del proyecto al sys.path
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
-# Agregar la carpeta 'geonode' explícitamente al sys.path
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'geonode')))
+sys.path.insert(0, os.path.abspath('..'))
 
 # Establece las variables de entorno de Django
-os.environ['DJANGO_SETTINGS_MODULE'] = 'geonode'  # Cambia 'nombre_de_tu_proyecto' por el nombre correcto
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'geonode.settings')  # Cambia esto si tu archivo de settings tiene otro nombre
 
 # Inicializa Django
 django.setup()
