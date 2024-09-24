@@ -13,8 +13,8 @@ from django.apps import apps
 
 sys.path.insert(0, os.path.abspath('..'))
 
-#os.environ['DJANGO_SETTINGS_MODULE'] = 'geonode'  # Cambia 'nombre_de_tu_proyecto' por el nombre correcto
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'geonode.settings')
+os.environ['DJANGO_SETTINGS_MODULE'] = 'geonode'  # Cambia 'nombre_de_tu_proyecto' por el nombre correcto
+#os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'geonode.settings')
 
 # Inicializa Django
 django.setup()
