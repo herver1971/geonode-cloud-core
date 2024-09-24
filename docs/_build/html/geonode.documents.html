@@ -197,7 +197,7 @@
 <li class="toctree-l3"><a class="reference internal" href="geonode.documents.management.commands.html">geonode.documents.management.commands package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="geonode.documents.management.commands.html#submodules">Submodules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="geonode.documents.management.commands.html#geonode-documents-management-commands-delete-orphaned-files-module">geonode.documents.management.commands.delete_orphaned_files module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="geonode.documents.management.commands.html#geonode-documents-management-commands-sync-geonode-documents-module">geonode.documents.management.commands.sync_geonode_documents module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.documents.management.commands.html#module-geonode.documents.management.commands.sync_geonode_documents">geonode.documents.management.commands.sync_geonode_documents module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="geonode.documents.management.commands.html#module-geonode.documents.management.commands">Module contents</a></li>
 </ul>
 </li>
@@ -281,7 +281,15 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="geonode.documents.migrations.html#geonode-documents-migrations-0032-remove-document-doc-file-module">geonode.documents.migrations.0032_remove_document_doc_file module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.documents.migrations.html#module-geonode.documents.migrations.0032_remove_document_doc_file">geonode.documents.migrations.0032_remove_document_doc_file module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.documents.migrations.html#geonode.documents.migrations.0032_remove_document_doc_file.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.documents.migrations.html#geonode.documents.migrations.0032_remove_document_doc_file.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.documents.migrations.html#geonode.documents.migrations.0032_remove_document_doc_file.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.documents.migrations.html#geonode.documents.migrations.0032_remove_document_doc_file.copy_doc_files"><code class="docutils literal notranslate"><span class="pre">copy_doc_files()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="geonode.documents.migrations.html#module-geonode.documents.migrations.0033_auto_20180414_2120">geonode.documents.migrations.0033_auto_20180414_2120 module</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="geonode.documents.migrations.html#geonode.documents.migrations.0033_auto_20180414_2120.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="geonode.documents.migrations.html#geonode.documents.migrations.0033_auto_20180414_2120.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
@@ -314,7 +322,15 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="geonode.documents.migrations.html#geonode-documents-migrations-0036-clean-document-thumbnails-module">geonode.documents.migrations.0036_clean_document_thumbnails module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.documents.migrations.html#module-geonode.documents.migrations.0036_clean_document_thumbnails">geonode.documents.migrations.0036_clean_document_thumbnails module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.documents.migrations.html#geonode.documents.migrations.0036_clean_document_thumbnails.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.documents.migrations.html#geonode.documents.migrations.0036_clean_document_thumbnails.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.documents.migrations.html#geonode.documents.migrations.0036_clean_document_thumbnails.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="geonode.documents.migrations.html#geonode.documents.migrations.0036_clean_document_thumbnails.set_null_to_non_image_docs_thumbnails"><code class="docutils literal notranslate"><span class="pre">set_null_to_non_image_docs_thumbnails()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="geonode.documents.migrations.html#module-geonode.documents.migrations.0037_delete_documentresourcelink">geonode.documents.migrations.0037_delete_documentresourcelink module</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="geonode.documents.migrations.html#geonode.documents.migrations.0037_delete_documentresourcelink.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="geonode.documents.migrations.html#geonode.documents.migrations.0037_delete_documentresourcelink.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
@@ -382,20 +398,67 @@
 <section id="geonode-documents-forms-module">
 <h2>geonode.documents.forms module<a class="headerlink" href="#geonode-documents-forms-module" title="Link to this heading"></a></h2>
 </section>
-<section id="geonode-documents-models-module">
-<h2>geonode.documents.models module<a class="headerlink" href="#geonode-documents-models-module" title="Link to this heading"></a></h2>
+<section id="module-geonode.documents.models">
+<span id="geonode-documents-models-module"></span><h2>geonode.documents.models module<a class="headerlink" href="#module-geonode.documents.models" title="Link to this heading"></a></h2>
 </section>
 <section id="geonode-documents-search-indexes-module">
 <h2>geonode.documents.search_indexes module<a class="headerlink" href="#geonode-documents-search-indexes-module" title="Link to this heading"></a></h2>
 </section>
-<section id="geonode-documents-tasks-module">
-<h2>geonode.documents.tasks module<a class="headerlink" href="#geonode-documents-tasks-module" title="Link to this heading"></a></h2>
+<section id="module-geonode.documents.tasks">
+<span id="geonode-documents-tasks-module"></span><h2>geonode.documents.tasks module<a class="headerlink" href="#module-geonode.documents.tasks" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="geonode.documents.tasks.DocumentRenderer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geonode.documents.tasks.</span></span><span class="sig-name descname"><span class="pre">DocumentRenderer</span></span><a class="reference internal" href="_modules/geonode/documents/tasks.html#DocumentRenderer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.documents.tasks.DocumentRenderer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.documents.tasks.DocumentRenderer.CROP_CENTERING">
+<span class="sig-name descname"><span class="pre">CROP_CENTERING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'pdf':</span> <span class="pre">(0.0,</span> <span class="pre">0.0)}</span></em><a class="headerlink" href="#geonode.documents.tasks.DocumentRenderer.CROP_CENTERING" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.documents.tasks.DocumentRenderer.FILETYPES">
+<span class="sig-name descname"><span class="pre">FILETYPES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['pdf']</span></em><a class="headerlink" href="#geonode.documents.tasks.DocumentRenderer.FILETYPES" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.documents.tasks.DocumentRenderer.preferred_crop_centering">
+<span class="sig-name descname"><span class="pre">preferred_crop_centering</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/documents/tasks.html#DocumentRenderer.preferred_crop_centering"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.documents.tasks.DocumentRenderer.preferred_crop_centering" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.documents.tasks.DocumentRenderer.render">
+<span class="sig-name descname"><span class="pre">render</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/documents/tasks.html#DocumentRenderer.render"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.documents.tasks.DocumentRenderer.render" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.documents.tasks.DocumentRenderer.render_pdf">
+<span class="sig-name descname"><span class="pre">render_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/documents/tasks.html#DocumentRenderer.render_pdf"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.documents.tasks.DocumentRenderer.render_pdf" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.documents.tasks.DocumentRenderer.supports">
+<span class="sig-name descname"><span class="pre">supports</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/documents/tasks.html#DocumentRenderer.supports"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.documents.tasks.DocumentRenderer.supports" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="geonode-documents-tests-module">
 <h2>geonode.documents.tests module<a class="headerlink" href="#geonode-documents-tests-module" title="Link to this heading"></a></h2>
 </section>
-<section id="geonode-documents-translation-module">
-<h2>geonode.documents.translation module<a class="headerlink" href="#geonode-documents-translation-module" title="Link to this heading"></a></h2>
+<section id="module-geonode.documents.translation">
+<span id="geonode-documents-translation-module"></span><h2>geonode.documents.translation module<a class="headerlink" href="#module-geonode.documents.translation" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="geonode.documents.translation.DocumentTranslationOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geonode.documents.translation.</span></span><span class="sig-name descname"><span class="pre">DocumentTranslationOptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/documents/translation.html#DocumentTranslationOptions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.documents.translation.DocumentTranslationOptions" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TranslationOptions</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.documents.translation.DocumentTranslationOptions.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('data_quality_statement',</span> <span class="pre">'purpose',</span> <span class="pre">'abstract',</span> <span class="pre">'constraints_other',</span> <span class="pre">'supplemental_information',</span> <span class="pre">'title')</span></em><a class="headerlink" href="#geonode.documents.translation.DocumentTranslationOptions.fields" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="geonode-documents-urls-module">
 <h2>geonode.documents.urls module<a class="headerlink" href="#geonode-documents-urls-module" title="Link to this heading"></a></h2>

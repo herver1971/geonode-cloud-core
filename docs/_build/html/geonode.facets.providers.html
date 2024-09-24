@@ -325,17 +325,489 @@ You may want to override this method in order to have an optimized logic
 </dd></dl>
 
 </section>
-<section id="geonode-facets-providers-category-module">
-<h2>geonode.facets.providers.category module<a class="headerlink" href="#geonode-facets-providers-category-module" title="Link to this heading"></a></h2>
+<section id="module-geonode.facets.providers.category">
+<span id="geonode-facets-providers-category-module"></span><h2>geonode.facets.providers.category module<a class="headerlink" href="#module-geonode.facets.providers.category" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="geonode.facets.providers.category.CategoryFacetProvider">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geonode.facets.providers.category.</span></span><span class="sig-name descname"><span class="pre">CategoryFacetProvider</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/facets/providers/category.html#CategoryFacetProvider"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.facets.providers.category.CategoryFacetProvider" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="geonode.facets.html#geonode.facets.models.FacetProvider" title="geonode.facets.models.FacetProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">FacetProvider</span></code></a></p>
+<p>Implements faceting for resource’s topicCategory</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.facets.providers.category.CategoryFacetProvider.get_facet_items">
+<span class="sig-name descname"><span class="pre">get_facet_items</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">queryset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lang</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'en'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topic_contains</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/facets/providers/category.html#CategoryFacetProvider.get_facet_items"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.facets.providers.category.CategoryFacetProvider.get_facet_items" title="Link to this definition"></a></dt>
+<dd><p>Return the items of the facets, in a tuple:
+- int, total number of items matched
+- list, topic records. A topic record is a dict having these keys:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>key: the key of the items that should be used for filtering</p></li>
+<li><p>label: a generic label for the item; the client should try and localize it whenever possible</p></li>
+<li><p>localized_label: a localized label for the item</p></li>
+<li><p>count: the count of such topic in the current facet</p></li>
+<li><p>other facet specific keys</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>queryset</strong> – the prefiltered queryset (may be filtered for authorization or other filters)</p></li>
+<li><p><strong>start</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span>) – int: pagination, the index of the initial returned item</p></li>
+<li><p><strong>end</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span>) – int: pagination, the index of the last returned item</p></li>
+<li><p><strong>lang</strong> – the preferred language for the labels</p></li>
+<li><p><strong>topic_contains</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</span>) – only returns matching topics</p></li>
+<li><p><strong>keys</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code></span>) – only returns topics with given keys, even if their count is 0</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type">(<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>)</span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>a tuple int:total count of record, list of items</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.facets.providers.category.CategoryFacetProvider.get_info">
+<span class="sig-name descname"><span class="pre">get_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lang</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'en'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/facets/providers/category.html#CategoryFacetProvider.get_info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.facets.providers.category.CategoryFacetProvider.get_info" title="Link to this definition"></a></dt>
+<dd><p>Get the basic info for this provider, as a dict with these keys:
+- ‘name’: the name of the provider (the one returned by name())
+- ‘filter’: the filtering key to be used in a filter query
+- ‘label’: a generic label for the facet; the client should try and localize it whenever possible
+- ‘localized_label’: a localized label for the facet (localized according to the <cite>lang</cite> param)
+- ‘type’: the facet type (e.g. user, region, thesaurus, …)
+- ‘hierarchical’: boolean value telling if the facet items are hierarchically organized
+- “order”: an optional integer suggesting the relative ordering of the facets</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>lang</strong> – lanuage for label localization</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>a dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.facets.providers.category.CategoryFacetProvider.get_topics">
+<span class="sig-name descname"><span class="pre">get_topics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keys</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lang</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'en'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/facets/providers/category.html#CategoryFacetProvider.get_topics"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.facets.providers.category.CategoryFacetProvider.get_topics" title="Link to this definition"></a></dt>
+<dd><p>Return the topics with the requested ids as a list
+- list, topic records. A topic record is a dict having these keys:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>key: the key of the items that should be used for filtering</p></li>
+<li><p>label: a generic label for the item; the client should try and localize it whenever possible</p></li>
+<li><p>localized_label: a localized label for the item</p></li>
+<li><p>other facet specific keys</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>keys</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></span>) – the list of the keys of the topics, as returned by the get_facet_items() method</p></li>
+<li><p><strong>lang</strong> – the preferred language for the labels</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of items</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="geonode.facets.providers.category.CategoryFacetProvider.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#geonode.facets.providers.category.CategoryFacetProvider.name" title="Link to this definition"></a></dt>
+<dd><p>Get the name of the facet, to be used as a key for this provider.
+You may want to override this method in order to have an optimized logic
+:return: The name of the provider as a str</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.facets.providers.category.CategoryFacetProvider.register">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">registry</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/facets/providers/category.html#CategoryFacetProvider.register"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.facets.providers.category.CategoryFacetProvider.register" title="Link to this definition"></a></dt>
+<dd><p>Perform registration of instances of this Provider
+:type registry: 
+:param registry: the registry where instances shall be registered
+:type kwargs: 
+:param kwargs: other args that may be needed by Providers</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="geonode-facets-providers-keyword-module">
-<h2>geonode.facets.providers.keyword module<a class="headerlink" href="#geonode-facets-providers-keyword-module" title="Link to this heading"></a></h2>
+<section id="module-geonode.facets.providers.keyword">
+<span id="geonode-facets-providers-keyword-module"></span><h2>geonode.facets.providers.keyword module<a class="headerlink" href="#module-geonode.facets.providers.keyword" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="geonode.facets.providers.keyword.KeywordFacetProvider">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geonode.facets.providers.keyword.</span></span><span class="sig-name descname"><span class="pre">KeywordFacetProvider</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/facets/providers/keyword.html#KeywordFacetProvider"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.facets.providers.keyword.KeywordFacetProvider" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="geonode.facets.html#geonode.facets.models.FacetProvider" title="geonode.facets.models.FacetProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">FacetProvider</span></code></a></p>
+<p>Implements faceting for resource’s keywords</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.facets.providers.keyword.KeywordFacetProvider.get_facet_items">
+<span class="sig-name descname"><span class="pre">get_facet_items</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">queryset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lang</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'en'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topic_contains</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/facets/providers/keyword.html#KeywordFacetProvider.get_facet_items"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.facets.providers.keyword.KeywordFacetProvider.get_facet_items" title="Link to this definition"></a></dt>
+<dd><p>Return the items of the facets, in a tuple:
+- int, total number of items matched
+- list, topic records. A topic record is a dict having these keys:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>key: the key of the items that should be used for filtering</p></li>
+<li><p>label: a generic label for the item; the client should try and localize it whenever possible</p></li>
+<li><p>localized_label: a localized label for the item</p></li>
+<li><p>count: the count of such topic in the current facet</p></li>
+<li><p>other facet specific keys</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>queryset</strong> – the prefiltered queryset (may be filtered for authorization or other filters)</p></li>
+<li><p><strong>start</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span>) – int: pagination, the index of the initial returned item</p></li>
+<li><p><strong>end</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span>) – int: pagination, the index of the last returned item</p></li>
+<li><p><strong>lang</strong> – the preferred language for the labels</p></li>
+<li><p><strong>topic_contains</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</span>) – only returns matching topics</p></li>
+<li><p><strong>keys</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code></span>) – only returns topics with given keys, even if their count is 0</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type">(<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>)</span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>a tuple int:total count of record, list of items</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.facets.providers.keyword.KeywordFacetProvider.get_info">
+<span class="sig-name descname"><span class="pre">get_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lang</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'en'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/facets/providers/keyword.html#KeywordFacetProvider.get_info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.facets.providers.keyword.KeywordFacetProvider.get_info" title="Link to this definition"></a></dt>
+<dd><p>Get the basic info for this provider, as a dict with these keys:
+- ‘name’: the name of the provider (the one returned by name())
+- ‘filter’: the filtering key to be used in a filter query
+- ‘label’: a generic label for the facet; the client should try and localize it whenever possible
+- ‘localized_label’: a localized label for the facet (localized according to the <cite>lang</cite> param)
+- ‘type’: the facet type (e.g. user, region, thesaurus, …)
+- ‘hierarchical’: boolean value telling if the facet items are hierarchically organized
+- “order”: an optional integer suggesting the relative ordering of the facets</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>lang</strong> – lanuage for label localization</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>a dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.facets.providers.keyword.KeywordFacetProvider.get_topics">
+<span class="sig-name descname"><span class="pre">get_topics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keys</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lang</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'en'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/facets/providers/keyword.html#KeywordFacetProvider.get_topics"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.facets.providers.keyword.KeywordFacetProvider.get_topics" title="Link to this definition"></a></dt>
+<dd><p>Return the topics with the requested ids as a list
+- list, topic records. A topic record is a dict having these keys:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>key: the key of the items that should be used for filtering</p></li>
+<li><p>label: a generic label for the item; the client should try and localize it whenever possible</p></li>
+<li><p>localized_label: a localized label for the item</p></li>
+<li><p>other facet specific keys</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>keys</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></span>) – the list of the keys of the topics, as returned by the get_facet_items() method</p></li>
+<li><p><strong>lang</strong> – the preferred language for the labels</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of items</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="geonode.facets.providers.keyword.KeywordFacetProvider.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#geonode.facets.providers.keyword.KeywordFacetProvider.name" title="Link to this definition"></a></dt>
+<dd><p>Get the name of the facet, to be used as a key for this provider.
+You may want to override this method in order to have an optimized logic
+:return: The name of the provider as a str</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.facets.providers.keyword.KeywordFacetProvider.register">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">registry</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/facets/providers/keyword.html#KeywordFacetProvider.register"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.facets.providers.keyword.KeywordFacetProvider.register" title="Link to this definition"></a></dt>
+<dd><p>Perform registration of instances of this Provider
+:type registry: 
+:param registry: the registry where instances shall be registered
+:type kwargs: 
+:param kwargs: other args that may be needed by Providers</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="geonode-facets-providers-region-module">
-<h2>geonode.facets.providers.region module<a class="headerlink" href="#geonode-facets-providers-region-module" title="Link to this heading"></a></h2>
+<section id="module-geonode.facets.providers.region">
+<span id="geonode-facets-providers-region-module"></span><h2>geonode.facets.providers.region module<a class="headerlink" href="#module-geonode.facets.providers.region" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="geonode.facets.providers.region.RegionFacetProvider">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geonode.facets.providers.region.</span></span><span class="sig-name descname"><span class="pre">RegionFacetProvider</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/facets/providers/region.html#RegionFacetProvider"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.facets.providers.region.RegionFacetProvider" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="geonode.facets.html#geonode.facets.models.FacetProvider" title="geonode.facets.models.FacetProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">FacetProvider</span></code></a></p>
+<p>Implements faceting for resource’s regions</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.facets.providers.region.RegionFacetProvider.get_facet_items">
+<span class="sig-name descname"><span class="pre">get_facet_items</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">queryset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lang</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'en'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topic_contains</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/facets/providers/region.html#RegionFacetProvider.get_facet_items"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.facets.providers.region.RegionFacetProvider.get_facet_items" title="Link to this definition"></a></dt>
+<dd><p>Return the items of the facets, in a tuple:
+- int, total number of items matched
+- list, topic records. A topic record is a dict having these keys:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>key: the key of the items that should be used for filtering</p></li>
+<li><p>label: a generic label for the item; the client should try and localize it whenever possible</p></li>
+<li><p>localized_label: a localized label for the item</p></li>
+<li><p>count: the count of such topic in the current facet</p></li>
+<li><p>other facet specific keys</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>queryset</strong> – the prefiltered queryset (may be filtered for authorization or other filters)</p></li>
+<li><p><strong>start</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span>) – int: pagination, the index of the initial returned item</p></li>
+<li><p><strong>end</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span>) – int: pagination, the index of the last returned item</p></li>
+<li><p><strong>lang</strong> – the preferred language for the labels</p></li>
+<li><p><strong>topic_contains</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</span>) – only returns matching topics</p></li>
+<li><p><strong>keys</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code></span>) – only returns topics with given keys, even if their count is 0</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type">(<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>)</span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>a tuple int:total count of record, list of items</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.facets.providers.region.RegionFacetProvider.get_info">
+<span class="sig-name descname"><span class="pre">get_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lang</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'en'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/facets/providers/region.html#RegionFacetProvider.get_info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.facets.providers.region.RegionFacetProvider.get_info" title="Link to this definition"></a></dt>
+<dd><p>Get the basic info for this provider, as a dict with these keys:
+- ‘name’: the name of the provider (the one returned by name())
+- ‘filter’: the filtering key to be used in a filter query
+- ‘label’: a generic label for the facet; the client should try and localize it whenever possible
+- ‘localized_label’: a localized label for the facet (localized according to the <cite>lang</cite> param)
+- ‘type’: the facet type (e.g. user, region, thesaurus, …)
+- ‘hierarchical’: boolean value telling if the facet items are hierarchically organized
+- “order”: an optional integer suggesting the relative ordering of the facets</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>lang</strong> – lanuage for label localization</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>a dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.facets.providers.region.RegionFacetProvider.get_topics">
+<span class="sig-name descname"><span class="pre">get_topics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keys</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lang</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'en'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/facets/providers/region.html#RegionFacetProvider.get_topics"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.facets.providers.region.RegionFacetProvider.get_topics" title="Link to this definition"></a></dt>
+<dd><p>Return the topics with the requested ids as a list
+- list, topic records. A topic record is a dict having these keys:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>key: the key of the items that should be used for filtering</p></li>
+<li><p>label: a generic label for the item; the client should try and localize it whenever possible</p></li>
+<li><p>localized_label: a localized label for the item</p></li>
+<li><p>other facet specific keys</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>keys</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></span>) – the list of the keys of the topics, as returned by the get_facet_items() method</p></li>
+<li><p><strong>lang</strong> – the preferred language for the labels</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of items</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="geonode.facets.providers.region.RegionFacetProvider.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#geonode.facets.providers.region.RegionFacetProvider.name" title="Link to this definition"></a></dt>
+<dd><p>Get the name of the facet, to be used as a key for this provider.
+You may want to override this method in order to have an optimized logic
+:return: The name of the provider as a str</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.facets.providers.region.RegionFacetProvider.register">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">registry</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/facets/providers/region.html#RegionFacetProvider.register"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.facets.providers.region.RegionFacetProvider.register" title="Link to this definition"></a></dt>
+<dd><p>Perform registration of instances of this Provider
+:type registry: 
+:param registry: the registry where instances shall be registered
+:type kwargs: 
+:param kwargs: other args that may be needed by Providers</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="geonode-facets-providers-thesaurus-module">
-<h2>geonode.facets.providers.thesaurus module<a class="headerlink" href="#geonode-facets-providers-thesaurus-module" title="Link to this heading"></a></h2>
+<section id="module-geonode.facets.providers.thesaurus">
+<span id="geonode-facets-providers-thesaurus-module"></span><h2>geonode.facets.providers.thesaurus module<a class="headerlink" href="#module-geonode.facets.providers.thesaurus" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="geonode.facets.providers.thesaurus.ThesaurusFacetProvider">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geonode.facets.providers.thesaurus.</span></span><span class="sig-name descname"><span class="pre">ThesaurusFacetProvider</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/facets/providers/thesaurus.html#ThesaurusFacetProvider"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.facets.providers.thesaurus.ThesaurusFacetProvider" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="geonode.facets.html#geonode.facets.models.FacetProvider" title="geonode.facets.models.FacetProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">FacetProvider</span></code></a></p>
+<p>Implements faceting for a given Thesaurus</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.facets.providers.thesaurus.ThesaurusFacetProvider.get_facet_items">
+<span class="sig-name descname"><span class="pre">get_facet_items</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">queryset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lang</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'en'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topic_contains</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/facets/providers/thesaurus.html#ThesaurusFacetProvider.get_facet_items"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.facets.providers.thesaurus.ThesaurusFacetProvider.get_facet_items" title="Link to this definition"></a></dt>
+<dd><p>Return the items of the facets, in a tuple:
+- int, total number of items matched
+- list, topic records. A topic record is a dict having these keys:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>key: the key of the items that should be used for filtering</p></li>
+<li><p>label: a generic label for the item; the client should try and localize it whenever possible</p></li>
+<li><p>localized_label: a localized label for the item</p></li>
+<li><p>count: the count of such topic in the current facet</p></li>
+<li><p>other facet specific keys</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>queryset</strong> – the prefiltered queryset (may be filtered for authorization or other filters)</p></li>
+<li><p><strong>start</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span>) – int: pagination, the index of the initial returned item</p></li>
+<li><p><strong>end</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span>) – int: pagination, the index of the last returned item</p></li>
+<li><p><strong>lang</strong> – the preferred language for the labels</p></li>
+<li><p><strong>topic_contains</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</span>) – only returns matching topics</p></li>
+<li><p><strong>keys</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code></span>) – only returns topics with given keys, even if their count is 0</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type">(<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>)</span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>a tuple int:total count of record, list of items</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.facets.providers.thesaurus.ThesaurusFacetProvider.get_info">
+<span class="sig-name descname"><span class="pre">get_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lang</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'en'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/facets/providers/thesaurus.html#ThesaurusFacetProvider.get_info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.facets.providers.thesaurus.ThesaurusFacetProvider.get_info" title="Link to this definition"></a></dt>
+<dd><p>Get the basic info for this provider, as a dict with these keys:
+- ‘name’: the name of the provider (the one returned by name())
+- ‘filter’: the filtering key to be used in a filter query
+- ‘label’: a generic label for the facet; the client should try and localize it whenever possible
+- ‘localized_label’: a localized label for the facet (localized according to the <cite>lang</cite> param)
+- ‘type’: the facet type (e.g. user, region, thesaurus, …)
+- ‘hierarchical’: boolean value telling if the facet items are hierarchically organized
+- “order”: an optional integer suggesting the relative ordering of the facets</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>lang</strong> – lanuage for label localization</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>a dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.facets.providers.thesaurus.ThesaurusFacetProvider.get_topics">
+<span class="sig-name descname"><span class="pre">get_topics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keys</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lang</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'en'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/facets/providers/thesaurus.html#ThesaurusFacetProvider.get_topics"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.facets.providers.thesaurus.ThesaurusFacetProvider.get_topics" title="Link to this definition"></a></dt>
+<dd><p>Return the topics with the requested ids as a list
+- list, topic records. A topic record is a dict having these keys:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>key: the key of the items that should be used for filtering</p></li>
+<li><p>label: a generic label for the item; the client should try and localize it whenever possible</p></li>
+<li><p>localized_label: a localized label for the item</p></li>
+<li><p>other facet specific keys</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>keys</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></span>) – the list of the keys of the topics, as returned by the get_facet_items() method</p></li>
+<li><p><strong>lang</strong> – the preferred language for the labels</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of items</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="geonode.facets.providers.thesaurus.ThesaurusFacetProvider.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#geonode.facets.providers.thesaurus.ThesaurusFacetProvider.name" title="Link to this definition"></a></dt>
+<dd><p>Get the name of the facet, to be used as a key for this provider.
+You may want to override this method in order to have an optimized logic
+:return: The name of the provider as a str</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.facets.providers.thesaurus.ThesaurusFacetProvider.register">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">registry</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/facets/providers/thesaurus.html#ThesaurusFacetProvider.register"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.facets.providers.thesaurus.ThesaurusFacetProvider.register" title="Link to this definition"></a></dt>
+<dd><p>Perform registration of instances of this Provider
+:type registry: 
+:param registry: the registry where instances shall be registered
+:type kwargs: 
+:param kwargs: other args that may be needed by Providers</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="module-geonode.facets.providers.users">
 <span id="geonode-facets-providers-users-module"></span><h2>geonode.facets.providers.users module<a class="headerlink" href="#module-geonode.facets.providers.users" title="Link to this heading"></a></h2>

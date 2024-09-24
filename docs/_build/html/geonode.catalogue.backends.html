@@ -314,8 +314,57 @@ the search result.</p>
 <section id="module-geonode.catalogue.backends.pycsw_local_mappings">
 <span id="geonode-catalogue-backends-pycsw-local-mappings-module"></span><h2>geonode.catalogue.backends.pycsw_local_mappings module<a class="headerlink" href="#module-geonode.catalogue.backends.pycsw_local_mappings" title="Link to this heading"></a></h2>
 </section>
-<section id="geonode-catalogue-backends-pycsw-plugin-module">
-<h2>geonode.catalogue.backends.pycsw_plugin module<a class="headerlink" href="#geonode-catalogue-backends-pycsw-plugin-module" title="Link to this heading"></a></h2>
+<section id="module-geonode.catalogue.backends.pycsw_plugin">
+<span id="geonode-catalogue-backends-pycsw-plugin-module"></span><h2>geonode.catalogue.backends.pycsw_plugin module<a class="headerlink" href="#module-geonode.catalogue.backends.pycsw_plugin" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="geonode.catalogue.backends.pycsw_plugin.GeoNodeRepository">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geonode.catalogue.backends.pycsw_plugin.</span></span><span class="sig-name descname"><span class="pre">GeoNodeRepository</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repo_filter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/catalogue/backends/pycsw_plugin.html#GeoNodeRepository"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.catalogue.backends.pycsw_plugin.GeoNodeRepository" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Repository</span></code></p>
+<p>Class to interact with underlying repository</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.catalogue.backends.pycsw_plugin.GeoNodeRepository.dataset">
+<span class="sig-name descname"><span class="pre">dataset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/catalogue/backends/pycsw_plugin.html#GeoNodeRepository.dataset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.catalogue.backends.pycsw_plugin.GeoNodeRepository.dataset" title="Link to this definition"></a></dt>
+<dd><p>Stub to mock a pycsw dataset object for Transactions</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.catalogue.backends.pycsw_plugin.GeoNodeRepository.delete">
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">constraint</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/catalogue/backends/pycsw_plugin.html#GeoNodeRepository.delete"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.catalogue.backends.pycsw_plugin.GeoNodeRepository.delete" title="Link to this definition"></a></dt>
+<dd><p>Delete a record from the repository</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.catalogue.backends.pycsw_plugin.GeoNodeRepository.query">
+<span class="sig-name descname"><span class="pre">query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">constraint</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sortby</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">typenames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxrecords</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startposition</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/catalogue/backends/pycsw_plugin.html#GeoNodeRepository.query"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.catalogue.backends.pycsw_plugin.GeoNodeRepository.query" title="Link to this definition"></a></dt>
+<dd><p>Query records from underlying repository</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.catalogue.backends.pycsw_plugin.GeoNodeRepository.query_domain">
+<span class="sig-name descname"><span class="pre">query_domain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">typenames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domainquerytype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'list'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/catalogue/backends/pycsw_plugin.html#GeoNodeRepository.query_domain"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.catalogue.backends.pycsw_plugin.GeoNodeRepository.query_domain" title="Link to this definition"></a></dt>
+<dd><p>Query by property domain values</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.catalogue.backends.pycsw_plugin.GeoNodeRepository.query_ids">
+<span class="sig-name descname"><span class="pre">query_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ids</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/catalogue/backends/pycsw_plugin.html#GeoNodeRepository.query_ids"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.catalogue.backends.pycsw_plugin.GeoNodeRepository.query_ids" title="Link to this definition"></a></dt>
+<dd><p>Query by list of identifiers</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.catalogue.backends.pycsw_plugin.GeoNodeRepository.query_insert">
+<span class="sig-name descname"><span class="pre">query_insert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'max'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/catalogue/backends/pycsw_plugin.html#GeoNodeRepository.query_insert"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.catalogue.backends.pycsw_plugin.GeoNodeRepository.query_insert" title="Link to this definition"></a></dt>
+<dd><p>Query to get latest (default) or earliest update to repository</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.catalogue.backends.pycsw_plugin.GeoNodeRepository.query_source">
+<span class="sig-name descname"><span class="pre">query_source</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/catalogue/backends/pycsw_plugin.html#GeoNodeRepository.query_source"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.catalogue.backends.pycsw_plugin.GeoNodeRepository.query_source" title="Link to this definition"></a></dt>
+<dd><p>Query by source</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="geonode-catalogue-backends-tests-module">
 <h2>geonode.catalogue.backends.tests module<a class="headerlink" href="#geonode-catalogue-backends-tests-module" title="Link to this heading"></a></h2>

@@ -225,8 +225,27 @@
 </dd></dl>
 
 </section>
-<section id="geonode-geoapps-api-permissions-module">
-<h2>geonode.geoapps.api.permissions module<a class="headerlink" href="#geonode-geoapps-api-permissions-module" title="Link to this heading"></a></h2>
+<section id="module-geonode.geoapps.api.permissions">
+<span id="geonode-geoapps-api-permissions-module"></span><h2>geonode.geoapps.api.permissions module<a class="headerlink" href="#module-geonode.geoapps.api.permissions" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="geonode.geoapps.api.permissions.GeoAppPermissionsFilter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geonode.geoapps.api.permissions.</span></span><span class="sig-name descname"><span class="pre">GeoAppPermissionsFilter</span></span><a class="reference internal" href="_modules/geonode/geoapps/api/permissions.html#GeoAppPermissionsFilter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.geoapps.api.permissions.GeoAppPermissionsFilter" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseFilterBackend</span></code></p>
+<p>A filter backend that limits results to those where the requesting user
+has read object level permissions.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.geoapps.api.permissions.GeoAppPermissionsFilter.filter_queryset">
+<span class="sig-name descname"><span class="pre">filter_queryset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queryset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/geoapps/api/permissions.html#GeoAppPermissionsFilter.filter_queryset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.geoapps.api.permissions.GeoAppPermissionsFilter.filter_queryset" title="Link to this definition"></a></dt>
+<dd><p>Return a filtered queryset.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.geoapps.api.permissions.GeoAppPermissionsFilter.shortcut_kwargs">
+<span class="sig-name descname"><span class="pre">shortcut_kwargs</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'accept_global_perms':</span> <span class="pre">True}</span></em><a class="headerlink" href="#geonode.geoapps.api.permissions.GeoAppPermissionsFilter.shortcut_kwargs" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="geonode-geoapps-api-serializers-module">
 <h2>geonode.geoapps.api.serializers module<a class="headerlink" href="#geonode-geoapps-api-serializers-module" title="Link to this heading"></a></h2>

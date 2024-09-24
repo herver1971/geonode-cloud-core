@@ -190,7 +190,19 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="geonode.catalogue.backends.html#geonode-catalogue-backends-pycsw-local-module">geonode.catalogue.backends.pycsw_local module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="geonode.catalogue.backends.html#module-geonode.catalogue.backends.pycsw_local_mappings">geonode.catalogue.backends.pycsw_local_mappings module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="geonode.catalogue.backends.html#geonode-catalogue-backends-pycsw-plugin-module">geonode.catalogue.backends.pycsw_plugin module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geonode.catalogue.backends.html#module-geonode.catalogue.backends.pycsw_plugin">geonode.catalogue.backends.pycsw_plugin module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geonode.catalogue.backends.html#geonode.catalogue.backends.pycsw_plugin.GeoNodeRepository"><code class="docutils literal notranslate"><span class="pre">GeoNodeRepository</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="geonode.catalogue.backends.html#geonode.catalogue.backends.pycsw_plugin.GeoNodeRepository.dataset"><code class="docutils literal notranslate"><span class="pre">GeoNodeRepository.dataset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.catalogue.backends.html#geonode.catalogue.backends.pycsw_plugin.GeoNodeRepository.delete"><code class="docutils literal notranslate"><span class="pre">GeoNodeRepository.delete()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.catalogue.backends.html#geonode.catalogue.backends.pycsw_plugin.GeoNodeRepository.query"><code class="docutils literal notranslate"><span class="pre">GeoNodeRepository.query()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.catalogue.backends.html#geonode.catalogue.backends.pycsw_plugin.GeoNodeRepository.query_domain"><code class="docutils literal notranslate"><span class="pre">GeoNodeRepository.query_domain()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.catalogue.backends.html#geonode.catalogue.backends.pycsw_plugin.GeoNodeRepository.query_ids"><code class="docutils literal notranslate"><span class="pre">GeoNodeRepository.query_ids()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.catalogue.backends.html#geonode.catalogue.backends.pycsw_plugin.GeoNodeRepository.query_insert"><code class="docutils literal notranslate"><span class="pre">GeoNodeRepository.query_insert()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.catalogue.backends.html#geonode.catalogue.backends.pycsw_plugin.GeoNodeRepository.query_source"><code class="docutils literal notranslate"><span class="pre">GeoNodeRepository.query_source()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="geonode.catalogue.backends.html#geonode-catalogue-backends-tests-module">geonode.catalogue.backends.tests module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="geonode.catalogue.backends.html#module-geonode.catalogue.backends">Module contents</a></li>
 </ul>
@@ -245,8 +257,20 @@
 </dd></dl>
 
 </section>
-<section id="geonode-catalogue-models-module">
-<h2>geonode.catalogue.models module<a class="headerlink" href="#geonode-catalogue-models-module" title="Link to this heading"></a></h2>
+<section id="module-geonode.catalogue.models">
+<span id="geonode-catalogue-models-module"></span><h2>geonode.catalogue.models module<a class="headerlink" href="#module-geonode.catalogue.models" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="geonode.catalogue.models.catalogue_post_save">
+<span class="sig-prename descclassname"><span class="pre">geonode.catalogue.models.</span></span><span class="sig-name descname"><span class="pre">catalogue_post_save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sender</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/catalogue/models.html#catalogue_post_save"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.catalogue.models.catalogue_post_save" title="Link to this definition"></a></dt>
+<dd><p>Get information from catalogue</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geonode.catalogue.models.catalogue_pre_delete">
+<span class="sig-prename descclassname"><span class="pre">geonode.catalogue.models.</span></span><span class="sig-name descname"><span class="pre">catalogue_pre_delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sender</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/catalogue/models.html#catalogue_pre_delete"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.catalogue.models.catalogue_pre_delete" title="Link to this definition"></a></dt>
+<dd><p>Removes the layer from the catalogue</p>
+</dd></dl>
+
 </section>
 <section id="geonode-catalogue-tests-module">
 <h2>geonode.catalogue.tests module<a class="headerlink" href="#geonode-catalogue-tests-module" title="Link to this heading"></a></h2>

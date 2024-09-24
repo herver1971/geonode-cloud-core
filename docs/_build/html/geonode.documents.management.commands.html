@@ -148,8 +148,32 @@
 <section id="geonode-documents-management-commands-delete-orphaned-files-module">
 <h2>geonode.documents.management.commands.delete_orphaned_files module<a class="headerlink" href="#geonode-documents-management-commands-delete-orphaned-files-module" title="Link to this heading"></a></h2>
 </section>
-<section id="geonode-documents-management-commands-sync-geonode-documents-module">
-<h2>geonode.documents.management.commands.sync_geonode_documents module<a class="headerlink" href="#geonode-documents-management-commands-sync-geonode-documents-module" title="Link to this heading"></a></h2>
+<section id="module-geonode.documents.management.commands.sync_geonode_documents">
+<span id="geonode-documents-management-commands-sync-geonode-documents-module"></span><h2>geonode.documents.management.commands.sync_geonode_documents module<a class="headerlink" href="#module-geonode.documents.management.commands.sync_geonode_documents" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="geonode.documents.management.commands.sync_geonode_documents.Command">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geonode.documents.management.commands.sync_geonode_documents.</span></span><span class="sig-name descname"><span class="pre">Command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stdout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stderr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">no_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/documents/management/commands/sync_geonode_documents.html#Command"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.documents.management.commands.sync_geonode_documents.Command" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseCommand</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.documents.management.commands.sync_geonode_documents.Command.add_arguments">
+<span class="sig-name descname"><span class="pre">add_arguments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/documents/management/commands/sync_geonode_documents.html#Command.add_arguments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.documents.management.commands.sync_geonode_documents.Command.add_arguments" title="Link to this definition"></a></dt>
+<dd><p>Entry point for subclassed commands to add custom arguments.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.documents.management.commands.sync_geonode_documents.Command.handle">
+<span class="sig-name descname"><span class="pre">handle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">options</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/documents/management/commands/sync_geonode_documents.html#Command.handle"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.documents.management.commands.sync_geonode_documents.Command.handle" title="Link to this definition"></a></dt>
+<dd><p>The actual logic of the command. Subclasses must implement
+this method.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.documents.management.commands.sync_geonode_documents.Command.help">
+<span class="sig-name descname"><span class="pre">help</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Update</span> <span class="pre">documents.</span> <span class="pre">For</span> <span class="pre">the</span> <span class="pre">moment</span> <span class="pre">only</span> <span class="pre">thumbnails</span> <span class="pre">can</span> <span class="pre">be</span> <span class="pre">updated'</span></em><a class="headerlink" href="#geonode.documents.management.commands.sync_geonode_documents.Command.help" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="module-geonode.documents.management.commands">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-geonode.documents.management.commands" title="Link to this heading"></a></h2>
