@@ -53,6 +53,12 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r docs/requirements.txt
 
+    # 7.1. Verify installed modules
+    - name: Verify installed modules
+      run: |
+        source venv/bin/activate
+        pip freeze  # Esto mostrará todos los módulos instalados
+
     # 8. Run sphinx-apidoc
     - name: Generate API documentation
       run: |
