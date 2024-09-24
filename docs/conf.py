@@ -18,13 +18,6 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'geonode'  # Cambia 'nombre_de_tu_proyect
 # Inicializa Django
 django.setup()
 
-autodoc_mock_imports = [
-    "geonode.geoserver", "geonode.api.paginator", "geonode.api.authorization",
-    "geonode.base.models", "geonode.layers.models", "geonode.people.utils",
-    "geonode.maps.models", "geonode.geoapps.models", "geonode.documents.models",
-    "geonode.groups.models", "guardian", "tastypie", "avatar"
-]
-
 project = 'GeoNode Cloud Core'
 copyright = '2024, Kan Territory & IT'
 author = 'Kan Territory & IT'
