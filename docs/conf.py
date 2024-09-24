@@ -10,19 +10,16 @@ import sys
 import django
 from django.conf import settings
 from django.apps import apps
-from dotenv import load_dotenv
 
-# Cargar las variables del archivo .env
-load_dotenv()
-
-# Agrega el directorio del proyecto al sys.path
 sys.path.insert(0, os.path.abspath('..'))
-
-# Establece el archivo de configuración de Django
-os.environ['DJANGO_SETTINGS_MODULE'] = 'geonode.settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'geonode'  # Cambia 'nombre_de_tu_proyecto' por el nombre correcto
 
 # Inicializa Django
 django.setup()
+
+#sys.path.insert(0, os.path.abspath('..'))
+#os.environ['DJANGO_SETTINGS_MODULE'] = 'geonode.settings'
+#django.setup()
 
 project = 'GeoNode Cloud Core'
 copyright = '2024, Kan Territory & IT'
