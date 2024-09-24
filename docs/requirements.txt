@@ -68,6 +68,7 @@ django-urls
 django-configurations
 django-translations
 django-core
+django-oauth2-provider
 
 # geopython dependencies
 pyproj<3.7.0
