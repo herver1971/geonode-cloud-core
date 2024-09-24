@@ -11,12 +11,13 @@ import django
 from django.conf import settings
 from django.apps import apps
 
-sys.path.insert(0, os.path.abspath('..'))
-
-os.environ['DJANGO_SETTINGS_MODULE'] = 'geonode'  # Cambia 'nombre_de_tu_proyecto' por el nombre correcto
-#os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'geonode.settings')
-
+#sys.path.insert(0, os.path.abspath('..'))
+#os.environ['DJANGO_SETTINGS_MODULE'] = 'geonode'  # Cambia 'nombre_de_tu_proyecto' por el nombre correcto
 # Inicializa Django
+#django.setup()
+
+sys.path.insert(0, os.path.abspath('..'))
+os.environ['DJANGO_SETTINGS_MODULE'] = 'geonode.settings'
 django.setup()
 
 project = 'GeoNode Cloud Core'
