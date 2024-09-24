@@ -13,9 +13,6 @@ from django.apps import apps
 
 sys.path.insert(0, os.path.abspath('..'))
 
-if 'EXTRA_CONTRIB_APPS' not in os.environ:
-    os.environ['EXTRA_CONTRIB_APPS'] = '[]'  # Definir una lista vacía si no está definida
-
 #os.environ['DJANGO_SETTINGS_MODULE'] = 'geonode'  # Cambia 'nombre_de_tu_proyecto' por el nombre correcto
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'geonode.settings')
 
