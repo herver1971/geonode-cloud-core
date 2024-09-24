@@ -59,6 +59,13 @@ jobs:
         source venv/bin/activate
         pip freeze  # Esto mostrará todos los módulos instalados
 
+    # 7.2 Instalación de geonode_logstash
+    - name: Install GeoNode Logstash
+      run: |
+        git clone https://github.com/GeoNode/geonode-contribs.git
+        cd geonode-contribs/geonode-logstash
+        pip install --upgrade -e .
+
     # 8. Run sphinx-apidoc
     - name: Generate API documentation
       run: |
