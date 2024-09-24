@@ -56,9 +56,6 @@ jobs:
 
     # 8. Build the HTML docs
     - name: Build HTML documentation
-      env:
-        DJANGO_SETTINGS_MODULE: geonode.settings
-        EXTRA_CONTRIB_APPS: '[]'  # Si tienes apps adicionales, puedes agregarlas aquí
       run: |
         source venv/bin/activate
         sphinx-build -b html docs docs/_build/html
