@@ -168,11 +168,41 @@
 <section id="geonode-api-authentication-module">
 <h2>geonode.api.authentication module<a class="headerlink" href="#geonode-api-authentication-module" title="Link to this heading"></a></h2>
 </section>
-<section id="module-geonode.api.authorization">
-<span id="geonode-api-authorization-module"></span><h2>geonode.api.authorization module<a class="headerlink" href="#module-geonode.api.authorization" title="Link to this heading"></a></h2>
+<section id="geonode-api-authorization-module">
+<h2>geonode.api.authorization module<a class="headerlink" href="#geonode-api-authorization-module" title="Link to this heading"></a></h2>
 </section>
 <section id="module-geonode.api.paginator">
 <span id="geonode-api-paginator-module"></span><h2>geonode.api.paginator module<a class="headerlink" href="#module-geonode.api.paginator" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="geonode.api.paginator.CrossSiteXHRPaginator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geonode.api.paginator.</span></span><span class="sig-name descname"><span class="pre">CrossSiteXHRPaginator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objects</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resource_uri</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collection_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'objects'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/api/paginator.html#CrossSiteXHRPaginator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.api.paginator.CrossSiteXHRPaginator" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Paginator</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.api.paginator.CrossSiteXHRPaginator.get_limit">
+<span class="sig-name descname"><span class="pre">get_limit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/api/paginator.html#CrossSiteXHRPaginator.get_limit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.api.paginator.CrossSiteXHRPaginator.get_limit" title="Link to this definition"></a></dt>
+<dd><p>Determines the proper maximum number of results to return.</p>
+<p>In order of importance, it will use:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The user-requested <code class="docutils literal notranslate"><span class="pre">limit</span></code> from the GET parameters, if specified.</p></li>
+<li><p>The object-level <code class="docutils literal notranslate"><span class="pre">limit</span></code> if specified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">settings.API_LIMIT_PER_PAGE</span></code> if specified.</p></li>
+</ul>
+</div></blockquote>
+<p>Default is 20 per page.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="geonode.api.paginator.CrossSiteXHRPaginator.get_offset">
+<span class="sig-name descname"><span class="pre">get_offset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/api/paginator.html#CrossSiteXHRPaginator.get_offset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.api.paginator.CrossSiteXHRPaginator.get_offset" title="Link to this definition"></a></dt>
+<dd><p>Determines the proper starting offset of results to return.</p>
+<p>It attempts to use the user-provided <code class="docutils literal notranslate"><span class="pre">offset</span></code> from the GET parameters,
+if specified. Otherwise, it falls back to the object-level <code class="docutils literal notranslate"><span class="pre">offset</span></code>.</p>
+<p>Default is 0.</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="geonode-api-resourcebase-api-module">
 <h2>geonode.api.resourcebase_api module<a class="headerlink" href="#geonode-api-resourcebase-api-module" title="Link to this heading"></a></h2>

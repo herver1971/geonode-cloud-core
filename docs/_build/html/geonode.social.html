@@ -176,50 +176,11 @@
 </dd></dl>
 
 </section>
-<section id="module-geonode.social.models">
-<span id="geonode-social-models-module"></span><h2>geonode.social.models module<a class="headerlink" href="#module-geonode.social.models" title="Link to this heading"></a></h2>
+<section id="geonode-social-models-module">
+<h2>geonode.social.models module<a class="headerlink" href="#geonode-social-models-module" title="Link to this heading"></a></h2>
 </section>
-<section id="module-geonode.social.signals">
-<span id="geonode-social-signals-module"></span><h2>geonode.social.signals module<a class="headerlink" href="#module-geonode.social.signals" title="Link to this heading"></a></h2>
-<p>Django signals connections and associated receiver functions for geonode’s
-third-party ‘social’ apps which include announcements, notifications,
-relationships, actstream user_messages and potentially others</p>
-<dl class="py function">
-<dt class="sig sig-object py" id="geonode.social.signals.activity_post_modify_object">
-<span class="sig-prename descclassname"><span class="pre">geonode.social.signals.</span></span><span class="sig-name descname"><span class="pre">activity_post_modify_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sender</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">created</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/social/signals.html#activity_post_modify_object"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.social.signals.activity_post_modify_object" title="Link to this definition"></a></dt>
-<dd><p>Creates new activities after a Map, Dataset, or Document is created/updated/deleted.</p>
-<p>action_settings:
-actor: the user who performed the activity
-action_object: the object that received the action
-created_verb: a translatable verb that is used when an object is created
-deleted_verb: a translatable verb that is used when an object is deleted
-object_name: the title of the object that is used to keep information about the object after it is deleted
-target: the target of an action
-updated_verb: a translatable verb that is used when an object is updated</p>
-<p>raw_action: a constant that describes the type of action performed (values should be: created, uploaded, deleted)</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="geonode.social.signals.rating_post_save">
-<span class="sig-prename descclassname"><span class="pre">geonode.social.signals.</span></span><span class="sig-name descname"><span class="pre">rating_post_save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sender</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">created</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/social/signals.html#rating_post_save"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.social.signals.rating_post_save" title="Link to this definition"></a></dt>
-<dd><p>Send a notification when rating a layer, map or document</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="geonode.social.signals.relationship_post_save">
-<span class="sig-prename descclassname"><span class="pre">geonode.social.signals.</span></span><span class="sig-name descname"><span class="pre">relationship_post_save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sender</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">created</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/social/signals.html#relationship_post_save"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.social.signals.relationship_post_save" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="geonode.social.signals.relationship_post_save_actstream">
-<span class="sig-prename descclassname"><span class="pre">geonode.social.signals.</span></span><span class="sig-name descname"><span class="pre">relationship_post_save_actstream</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sender</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">created</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/social/signals.html#relationship_post_save_actstream"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.social.signals.relationship_post_save_actstream" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="geonode.social.signals.relationship_pre_delete_actstream">
-<span class="sig-prename descclassname"><span class="pre">geonode.social.signals.</span></span><span class="sig-name descname"><span class="pre">relationship_pre_delete_actstream</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sender</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/social/signals.html#relationship_pre_delete_actstream"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.social.signals.relationship_pre_delete_actstream" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
+<section id="geonode-social-signals-module">
+<h2>geonode.social.signals module<a class="headerlink" href="#geonode-social-signals-module" title="Link to this heading"></a></h2>
 </section>
 <section id="geonode-social-tests-module">
 <h2>geonode.social.tests module<a class="headerlink" href="#geonode-social-tests-module" title="Link to this heading"></a></h2>

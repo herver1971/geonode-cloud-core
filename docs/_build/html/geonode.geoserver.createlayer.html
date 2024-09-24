@@ -149,7 +149,7 @@
 <li class="toctree-l2"><a class="reference internal" href="geonode.geoserver.createlayer.management.html#subpackages">Subpackages</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="geonode.geoserver.createlayer.management.commands.html">geonode.geoserver.createlayer.management.commands package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="geonode.geoserver.createlayer.management.commands.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="geonode.geoserver.createlayer.management.commands.html#module-geonode.geoserver.createlayer.management.commands.createvectorlayer">geonode.geoserver.createlayer.management.commands.createvectorlayer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geonode.geoserver.createlayer.management.commands.html#geonode-geoserver-createlayer-management-commands-createvectorlayer-module">geonode.geoserver.createlayer.management.commands.createvectorlayer module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="geonode.geoserver.createlayer.management.commands.html#module-geonode.geoserver.createlayer.management.commands">Module contents</a></li>
 </ul>
 </li>
@@ -166,21 +166,60 @@
 </section>
 <section id="module-geonode.geoserver.createlayer.apps">
 <span id="geonode-geoserver-createlayer-apps-module"></span><h2>geonode.geoserver.createlayer.apps module<a class="headerlink" href="#module-geonode.geoserver.createlayer.apps" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="geonode.geoserver.createlayer.apps.GeoNodeGeoserverCreatelayerAppConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geonode.geoserver.createlayer.apps.</span></span><span class="sig-name descname"><span class="pre">GeoNodeGeoserverCreatelayerAppConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_module</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/geoserver/createlayer/apps.html#GeoNodeGeoserverCreatelayerAppConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.geoserver.createlayer.apps.GeoNodeGeoserverCreatelayerAppConfig" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">AppConfig</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.geoserver.createlayer.apps.GeoNodeGeoserverCreatelayerAppConfig.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'geonode.geoserver.createlayer'</span></em><a class="headerlink" href="#geonode.geoserver.createlayer.apps.GeoNodeGeoserverCreatelayerAppConfig.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.geoserver.createlayer.apps.GeoNodeGeoserverCreatelayerAppConfig.verbose_name">
+<span class="sig-name descname"><span class="pre">verbose_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'GeoNode</span> <span class="pre">Geoserver</span> <span class="pre">Createlayer'</span></em><a class="headerlink" href="#geonode.geoserver.createlayer.apps.GeoNodeGeoserverCreatelayerAppConfig.verbose_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="module-geonode.geoserver.createlayer.forms">
 <span id="geonode-geoserver-createlayer-forms-module"></span><h2>geonode.geoserver.createlayer.forms module<a class="headerlink" href="#module-geonode.geoserver.createlayer.forms" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="geonode.geoserver.createlayer.forms.NewDatasetForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">geonode.geoserver.createlayer.forms.</span></span><span class="sig-name descname"><span class="pre">NewDatasetForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_id='id_%s'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_class=&lt;class</span> <span class="pre">'django.forms.utils.ErrorList'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_suffix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_permitted=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_order=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_required_attribute=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer=None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geonode/geoserver/createlayer/forms.html#NewDatasetForm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geonode.geoserver.createlayer.forms.NewDatasetForm" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Form</span></code></p>
+<p>A form to create an empty layer in PostGIS.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.geoserver.createlayer.forms.NewDatasetForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'attributes':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'geometry_type':</span> <span class="pre">&lt;django.forms.fields.ChoiceField</span> <span class="pre">object&gt;,</span> <span class="pre">'name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'permissions':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'title':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#geonode.geoserver.createlayer.forms.NewDatasetForm.base_fields" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="geonode.geoserver.createlayer.forms.NewDatasetForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'attributes':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'geometry_type':</span> <span class="pre">&lt;django.forms.fields.ChoiceField</span> <span class="pre">object&gt;,</span> <span class="pre">'name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'permissions':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'title':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#geonode.geoserver.createlayer.forms.NewDatasetForm.declared_fields" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="geonode.geoserver.createlayer.forms.NewDatasetForm.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#geonode.geoserver.createlayer.forms.NewDatasetForm.media" title="Link to this definition"></a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="module-geonode.geoserver.createlayer.tests">
-<span id="geonode-geoserver-createlayer-tests-module"></span><h2>geonode.geoserver.createlayer.tests module<a class="headerlink" href="#module-geonode.geoserver.createlayer.tests" title="Link to this heading"></a></h2>
+<section id="geonode-geoserver-createlayer-tests-module">
+<h2>geonode.geoserver.createlayer.tests module<a class="headerlink" href="#geonode-geoserver-createlayer-tests-module" title="Link to this heading"></a></h2>
 </section>
-<section id="module-geonode.geoserver.createlayer.urls">
-<span id="geonode-geoserver-createlayer-urls-module"></span><h2>geonode.geoserver.createlayer.urls module<a class="headerlink" href="#module-geonode.geoserver.createlayer.urls" title="Link to this heading"></a></h2>
+<section id="geonode-geoserver-createlayer-urls-module">
+<h2>geonode.geoserver.createlayer.urls module<a class="headerlink" href="#geonode-geoserver-createlayer-urls-module" title="Link to this heading"></a></h2>
 </section>
-<section id="module-geonode.geoserver.createlayer.utils">
-<span id="geonode-geoserver-createlayer-utils-module"></span><h2>geonode.geoserver.createlayer.utils module<a class="headerlink" href="#module-geonode.geoserver.createlayer.utils" title="Link to this heading"></a></h2>
+<section id="geonode-geoserver-createlayer-utils-module">
+<h2>geonode.geoserver.createlayer.utils module<a class="headerlink" href="#geonode-geoserver-createlayer-utils-module" title="Link to this heading"></a></h2>
 </section>
-<section id="module-geonode.geoserver.createlayer.views">
-<span id="geonode-geoserver-createlayer-views-module"></span><h2>geonode.geoserver.createlayer.views module<a class="headerlink" href="#module-geonode.geoserver.createlayer.views" title="Link to this heading"></a></h2>
+<section id="geonode-geoserver-createlayer-views-module">
+<h2>geonode.geoserver.createlayer.views module<a class="headerlink" href="#geonode-geoserver-createlayer-views-module" title="Link to this heading"></a></h2>
 </section>
 <section id="module-geonode.geoserver.createlayer">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-geonode.geoserver.createlayer" title="Link to this heading"></a></h2>
