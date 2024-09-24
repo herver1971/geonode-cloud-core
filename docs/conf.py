@@ -13,8 +13,7 @@ from django.apps import apps
 
 sys.path.insert(0, os.path.abspath('..'))
 
-# Establece las variables de entorno de Django
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'geonode.settings')  # Cambia esto si tu archivo de settings tiene otro nombre
+os.environ['DJANGO_SETTINGS_MODULE'] = 'geonode'  # Cambia 'nombre_de_tu_proyecto' por el nombre correcto
 
 # Inicializa Django
 django.setup()
