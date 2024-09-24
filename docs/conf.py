@@ -13,6 +13,7 @@ from django.apps import apps
 
 sys.path.insert(0, os.path.abspath('..'))
 
+os.environ.setdefault('EXTRA_CONTRIB_APPS', '[]')
 #os.environ['DJANGO_SETTINGS_MODULE'] = 'geonode'  # Cambia 'nombre_de_tu_proyecto' por el nombre correcto
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'geonode.settings')
 
